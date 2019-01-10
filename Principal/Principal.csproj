@@ -52,6 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Antisepticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Antisepticas.Designer.cs">
+      <DependentUpon>Antisepticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Astringentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\logica.csproj">
+      <Project>{b224294a-45d4-48ff-be00-0f3473684dcf}</Project>
+      <Name>logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
