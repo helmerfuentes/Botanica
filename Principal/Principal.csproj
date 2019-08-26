@@ -32,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>E:\Descargas\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>G:\BORRAR\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -48,7 +48,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="TransControl_src">
-      <HintPath>E:\Descargas\TransControl_src\TransControl_src.dll</HintPath>
+      <HintPath>ArchivosDll\TransControl_src.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +105,9 @@
       <Project>{b224294a-45d4-48ff-be00-0f3473684dcf}</Project>
       <Name>logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ArchivosDll\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
