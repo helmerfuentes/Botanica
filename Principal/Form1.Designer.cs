@@ -69,7 +69,7 @@
             this.b13.ActiveForecolor = System.Drawing.Color.White;
             this.b13.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.b13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.b13.BackColor = System.Drawing.SystemColors.Control;
+            this.b13.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.b13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b13.BackgroundImage")));
             this.b13.ButtonText = "Estimulantes";
             this.b13.Cursor = System.Windows.Forms.Cursors.Hand;
