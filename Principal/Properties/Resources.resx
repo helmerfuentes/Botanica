@@ -118,16 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="petroperus-marzo2011" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\petroperus-marzo2011.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="salvia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\salvia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Anamu (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\plantas\plantas helmer\Anamu (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Arbustos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas pozo\Arbustos.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lengua Suegra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\lengua Suegra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Verdolaga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas pozo\Verdolaga.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\plantas\plantas helmer\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="55e13d19d5c9b70ea25eda3b3ea1c0d6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\55e13d19d5c9b70ea25eda3b3ea1c0d6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NoImageFound.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NoImageFound.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="llarumbo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\llarumbo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="paraiso (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\paraiso (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="salbia (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\salbia (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RIK" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chicorion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\chicorion (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Anamu (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\Anamu (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tua tua (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\tua tua (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ortiga" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\plantas\plantas helmer\ortiga.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -16,7 +16,7 @@ namespace Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Astringentes());
+            Application.Run(new Form1());
         }
     }
 }
