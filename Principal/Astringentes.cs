@@ -31,5 +31,10 @@ namespace Principal
         {
 
         }
+
+        private void BunifuCustomTextbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

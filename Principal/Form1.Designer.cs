@@ -69,7 +69,7 @@
             this.b13.ActiveForecolor = System.Drawing.Color.White;
             this.b13.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.b13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.b13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.b13.BackColor = System.Drawing.SystemColors.Control;
             this.b13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b13.BackgroundImage")));
             this.b13.ButtonText = "Estimulantes";
             this.b13.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -476,7 +476,7 @@
             this.b8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.b8.BackColor = System.Drawing.SystemColors.Control;
             this.b8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b8.BackgroundImage")));
-            this.b8.ButtonText = "Desobtruyentes.";
+            this.b8.ButtonText = "Desobtruyentes";
             this.b8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b8.ForeColor = System.Drawing.Color.SeaGreen;
@@ -611,7 +611,7 @@
             this.b3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.b3.BackColor = System.Drawing.SystemColors.Control;
             this.b3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("b3.BackgroundImage")));
-            this.b3.ButtonText = "Apetentes.";
+            this.b3.ButtonText = "Apetentes";
             this.b3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.b3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b3.ForeColor = System.Drawing.Color.SeaGreen;
