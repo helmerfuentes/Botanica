@@ -60,7 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>G:\BORRAR\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>ArchivosDll\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -100,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Antisepticas.resx">
+      <DependentUpon>Antisepticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Astringentes.resx">
       <DependentUpon>Astringentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,7 +118,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Principal_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
