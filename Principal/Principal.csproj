@@ -100,6 +100,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Antisepticas.resx">
+      <DependentUpon>Antisepticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Astringentes.resx">
       <DependentUpon>Astringentes.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Principal_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -147,6 +151,15 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="plantas\plantas helmer\Anamu %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\petroperus-marzo2011.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55e13d19d5c9b70ea25eda3b3ea1c0d6.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

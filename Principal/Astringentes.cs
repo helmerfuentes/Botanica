@@ -36,5 +36,10 @@ namespace Principal
         {
 
         }
+
+        private void TransparentControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
