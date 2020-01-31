@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,15 @@ namespace Principal
     public partial class Form1 : Form
     {
 
-        String boton;
+        String boton="b1";
         public Form1()
         {
             InitializeComponent();
+
+          
         }
+
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,6 +56,7 @@ namespace Principal
         public void informacionmostrar(String boton)
         {
             informacion.Text = "";
+            if (boton == "") boton = "b1";
             switch (boton)
             {
                 case "b1":
@@ -133,6 +139,8 @@ namespace Principal
         public void abrirformulario(String boton)
         {
             informacion.Text = "";
+            if (boton == "") boton = "b1";
+
             this.Hide();
             switch (boton)
             {

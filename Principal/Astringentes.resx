@@ -117,6 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox18.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA37AAAN+wELdzWbAAAAB3RJ
+        TUUH4wgfAy0XxbGu9QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAYPSURBVHhe
+        7ZprbBRlFIZ3t61aRCJVEKUSaKjbuYAxNRKkOzOtxBhMMP4gatRKIPoDbyT+0CgaYvxBAjZ0Z2abBrEl
+        MTH2j5gQjRcwChGjMWq8gBgjioIkKqJovILPYb/itk7bvcx22919kzebznbOd953vvm+c2Y2UkUVVVRR
+        RZHQ2ttao/vWUjhNHaogDKyIGZ59n+5ZW+Cl6mgFYGDFoPi7dc/eh/idcJ76tsyB+Bl9y2oQfxfiP4N/
+        I/6NyjAA8U29S89B9Eq4H56EpyrDAMQ393Sci+A74Mdp4YMsdwMQH0+1T0Ps7fCjoeLL3YC0+PMRehv8
+        cKjwcjcA8S2p9umIvBV+MFR0JsvRgKHi3x8qeDjLzYCcxAvLyYD/7vksxQvLxYC0eFntZcEb5Z4fzjIw
+        gKYm0pxqn4og2epGWO1HorWHz7i5+ZrYwo3XqoiTCCLe9JfUa669GiGfDhWXFSmJnU4j2T7fcJ0G3ben
+        ap5TD+t0rz2qhpmYEPGX9yyqQ/ydCKGxCRSYLf+BhzDgVcRvgNdjwCz6hhqOx0zPjjrrHTXyBIH084iX
+        ru5zJSJsHseA3Xyuw4ArMKBGDV16KPH3k5yIV41NUSgz4y/4E9xjeNZaM5VoUmmUCOl+/l4Skq6OljYw
+        8bApJosRJ+BXLJ79hm8nVEbjB3XlHyAJES8JBSVbbMqsECMOYsQ2zbOuVOkVGekrL9NeFrxSic+kzIqf
+        4QHNs12ju202jKlsw0XGlRfxf8KghEpFMeJH+KbuOjfDepV2SDjzALOk0z4bSm772Eo36G5irtG1uPBd
+        Q135tacDT2zxmfwOPsf60KZ5icJmg+E7ss8fgOO12ofF3+ArcLnu2vm/d2CreVAFCxpkolNm7G4M6NRc
+        60IlKTeYvhXn/n+KQL9kBJ5MlAXyXbiaizlTycoNmKAR4Gko1VjQIBOeXMR3+FxJj3GBkpUbMEEnQB+U
+        7aaYpW+xKDlL632T6Tr5rQmYYBKgH/6gAgYNNJEpFeTL8Lq4a52tZOUGZcI2+D2cjCb8Dp+lcmxt7Fqc
+        X9WICQsIMplNkBncFU9ajUpS7lAmTObbYb88y2A9mKIk5Y6MNeFYRuDJQrlou0zXTlDt5v/oDRMMAsnu
+        cFwFzpVSYf6qKAWX3KN/QGm45Ltizq4TbI9bF/htDUpOfsAEXQIRUEQEDTQaj9C8ULfbz/A5QJwX4etw
+        L8ek+ToCZeuVGkSKMTFJDJIVPShertxH97iq4DYaE1pIegsBJbmggUbgKO8FTkWiem/bND3l6JrvLOP/
+        1nDORox6gc8vocyWQmeKnPuSkWy7RI2aPzDhMkzoUUGDBgtgfi9GtN5EndaTmMe58iKmn3r/8P9jZ81v
+        MPURFTp/YEAUzseEzQTN0oS8DYhgQJRzY5qbqGncpJ2lJ23bcO1u4n4Nc7gI9klyfqvFa5ujwucPDIjB
+        ZgJ2ETiLJEJ4NbY+TQyoxYD65mRiJjE7ib8TZtvEHaZPeDgdsEBgQA2U22ETgccwIfx3g1R4MjOmMENm
+        Gp51A+Nsh2Nt1dI679W8jotUmMKAAbVGupUew4TwDTiDU5GI4Vr1Wspq1HzrFsZ7DY72bOOQ4Tur1NmF
+        AxPqxjahiAYMAiMw4Tx2ElP3nXWMO9JrPDFnh7HeqFVnFo6xTRgHAxSaepfGMGCW4Tk3ks/zjD98NshW
+        +gXfLVanhAO5HdSaELAwjp8BgzA9Z6rp2VeRz5PkMHz7PMbxJ9S/hgcMkIVRdodhW+T4GyBYmHRqGbeZ
+        HB6C8qvVQQOksHp7fnJRyO8WAAbIFil1ghRLqmIsjQGCuX1OtMV3ZpPHPTDzVy1H6RTDvQ0GgQFSLMnt
+        IGUzvUPpDDiNgRURFscZ5CM/8HhPGSC1w6PqP4oDTJDeQRqoHSU1QEFPWdN131pFPp9AuQ12UVwV9xcq
+        mCAPWtdonj1DHSod2CrjKatBHpKQ00F4VOu++mL1bfFgJjsaYHj7biGQX7r5TgPV42MY8C0zc7n6pnIQ
+        37okqvVY9BK2xy3xuDpcWWBGxsxk+xxMkDarMtHi2TFoqD+rqKKKKioRkci/OrhzKkOqBUsAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="pictureBox17.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RK5CYII=
+</value>
+  </data>
   <data name="informacion.Text" xml:space="preserve">
     <value>Las plantas medicinales con acción astringente tiene la cualidad de actuar sobre las mucosas extrayendo el líquido acumulado y contrayendo los tejidos. Este tipo de plantas además tienen asociado un efecto antiinflamatorio al ser capaces de reducir la inflamación de los tejidos</value>
   </data>
