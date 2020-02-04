@@ -18,13 +18,13 @@ namespace logica
             DatosTipoPlanta = new DatosTipoPlanta();
             plantas = new ArrayList();
         }
-        public ArrayList getAll()
-        {
-            string sql = "select *from tipo";
-            return plantas = DatosTipoPlanta.gellAll(sql);
+        //public ArrayList getAll()
+        //{
+        //    string sql = "select *from tipo";
+        //    return plantas = DatosTipoPlanta.gellAll(sql);
 
 
-        }
+        //}
 
     }
 }

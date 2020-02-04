@@ -1,6 +1,6 @@
 ﻿using Datos;
 using Entidades;
-using MySql.Data.MySqlClient;
+//using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,45 +13,45 @@ namespace Dato
 {
     public class DatosTipoPlanta : Conexion
     {
-        public MySqlCommand cmd;
+        //    public MySqlCommand cmd;
 
 
-        public ArrayList gellAll(string sql)
-        {
-            try
-            {
-                if (conectar())
-                {
-                    ArrayList lista = new ArrayList();
+        //    public ArrayList gellAll(string sql)
+        //    {
+        //        try
+        //        {
+        //            if (conectar())
+        //            {
+        //                ArrayList lista = new ArrayList();
 
-                    cmd = new MySqlCommand(sql, connection);
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        TipoPlanta p = new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcion"].ToString(), myReader["tipo"].ToString());
-                        lista.Add(p);
+        //                cmd = new MySqlCommand(sql, connection);
+        //                MySqlDataReader myReader = cmd.ExecuteReader();
+        //                while (myReader.Read())
+        //                {
+        //                    TipoPlanta p = new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcion"].ToString(), myReader["tipo"].ToString());
+        //                    lista.Add(p);
 
-                    }
+        //                }
 
-                    return lista;
+        //                return lista;
 
-                }
-                else
-                {
-                    return null;
-                }
+        //            }
+        //            else
+        //            {
+        //                return null;
+        //            }
 
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-            }
-            finally
-            {
-                desConectar();
-            }
-        }
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            Console.WriteLine(e.Message);
+        //            return null;
+        //        }
+        //        finally
+        //        {
+        //            desConectar();
+        //        }
+        //    }
 
     }
 }

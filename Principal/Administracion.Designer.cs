@@ -35,42 +35,9 @@
             this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.chbbequicas = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chbcalmante = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chbtonicas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbApetente = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbEmetica = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbEmoliente = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbFebrifugas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbvuelnerarias = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbCalmanteSedativa = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chbVermigugas = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel23 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel24 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chbDiureticas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbAntisepticas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbSudorificas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbEstimulante = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbAstringentes = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbCarminativas = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbDepurativas = new Bunifu.Framework.UI.BunifuCheckbox();
             this.chbexpectorante = new Bunifu.Framework.UI.BunifuCheckbox();
             this.chbEstomacales = new Bunifu.Framework.UI.BunifuCheckbox();
             this.chbResolutivas = new Bunifu.Framework.UI.BunifuCheckbox();
@@ -78,25 +45,59 @@
             this.chbEmenegogas = new Bunifu.Framework.UI.BunifuCheckbox();
             this.chbhemostaticas = new Bunifu.Framework.UI.BunifuCheckbox();
             this.chbDesobtruyentes = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.chbVermigugas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel24 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel20 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbDiureticas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel19 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbAntisepticas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chbSudorificas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbEstimulante = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel21 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbAstringentes = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel22 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbCarminativas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel17 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbDepurativas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbvuelnerarias = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbFebrifugas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbApetente = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.chbEmoliente = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbEmetica = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbtonicas = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.chbcalmante = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pcImagen = new System.Windows.Forms.PictureBox();
             this.bunifuCustomLabel26 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.chbCalmanteSedativa = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.pcImagen = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -124,6 +125,7 @@
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // txtSegundoApellido
             // 
@@ -231,330 +233,29 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(695, 191);
             this.bunifuGradientPanel1.TabIndex = 41;
             // 
-            // bunifuCustomLabel2
+            // chbCalmanteSedativa
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(136, 54);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(85, 17);
-            this.bunifuCustomLabel2.TabIndex = 42;
-            this.bunifuCustomLabel2.Text = "Antisépticas";
+            this.chbCalmanteSedativa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbCalmanteSedativa.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbCalmanteSedativa.Checked = false;
+            this.chbCalmanteSedativa.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbCalmanteSedativa.ForeColor = System.Drawing.Color.White;
+            this.chbCalmanteSedativa.Location = new System.Drawing.Point(643, 38);
+            this.chbCalmanteSedativa.Name = "chbCalmanteSedativa";
+            this.chbCalmanteSedativa.Size = new System.Drawing.Size(20, 20);
+            this.chbCalmanteSedativa.TabIndex = 97;
             // 
-            // bunifuCustomLabel3
+            // chbVermigugas
             // 
-            this.bunifuCustomLabel3.AutoSize = true;
-            this.bunifuCustomLabel3.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(11, 96);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(73, 17);
-            this.bunifuCustomLabel3.TabIndex = 44;
-            this.bunifuCustomLabel3.Text = "Apetentes";
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(136, 32);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(85, 17);
-            this.bunifuCustomLabel4.TabIndex = 46;
-            this.bunifuCustomLabel4.Text = "Astringentes";
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(13, 32);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(65, 17);
-            this.bunifuCustomLabel5.TabIndex = 48;
-            this.bunifuCustomLabel5.Text = "Béquicas";
-            // 
-            // chbcalmante
-            // 
-            this.chbcalmante.AutoSize = true;
-            this.chbcalmante.BackColor = System.Drawing.SystemColors.Control;
-            this.chbcalmante.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.chbcalmante.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.chbcalmante.Location = new System.Drawing.Point(496, 43);
-            this.chbcalmante.Name = "chbcalmante";
-            this.chbcalmante.Size = new System.Drawing.Size(152, 17);
-            this.chbcalmante.TabIndex = 50;
-            this.chbcalmante.Text = "Calmantes o sedativa";
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(135, 76);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(95, 17);
-            this.bunifuCustomLabel7.TabIndex = 52;
-            this.bunifuCustomLabel7.Text = "Carminativas";
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(135, 9);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(86, 17);
-            this.bunifuCustomLabel8.TabIndex = 54;
-            this.bunifuCustomLabel8.Text = "Depurativas";
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(295, 9);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(106, 17);
-            this.bunifuCustomLabel9.TabIndex = 56;
-            this.bunifuCustomLabel9.Text = "Desobtruyentes";
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(136, 143);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(71, 17);
-            this.bunifuCustomLabel10.TabIndex = 58;
-            this.bunifuCustomLabel10.Text = "Diuréticas";
-            // 
-            // chbtonicas
-            // 
-            this.chbtonicas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbtonicas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbtonicas.Checked = false;
-            this.chbtonicas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbtonicas.ForeColor = System.Drawing.Color.White;
-            this.chbtonicas.Location = new System.Drawing.Point(90, 11);
-            this.chbtonicas.Name = "chbtonicas";
-            this.chbtonicas.Size = new System.Drawing.Size(20, 20);
-            this.chbtonicas.TabIndex = 59;
-            // 
-            // chbApetente
-            // 
-            this.chbApetente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbApetente.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbApetente.Checked = false;
-            this.chbApetente.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbApetente.ForeColor = System.Drawing.Color.White;
-            this.chbApetente.Location = new System.Drawing.Point(90, 96);
-            this.chbApetente.Name = "chbApetente";
-            this.chbApetente.Size = new System.Drawing.Size(20, 20);
-            this.chbApetente.TabIndex = 60;
-            // 
-            // chbEmetica
-            // 
-            this.chbEmetica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEmetica.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEmetica.Checked = false;
-            this.chbEmetica.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbEmetica.ForeColor = System.Drawing.Color.White;
-            this.chbEmetica.Location = new System.Drawing.Point(90, 76);
-            this.chbEmetica.Name = "chbEmetica";
-            this.chbEmetica.Size = new System.Drawing.Size(20, 20);
-            this.chbEmetica.TabIndex = 62;
-            // 
-            // chbEmoliente
-            // 
-            this.chbEmoliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEmoliente.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEmoliente.Checked = false;
-            this.chbEmoliente.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbEmoliente.ForeColor = System.Drawing.Color.White;
-            this.chbEmoliente.Location = new System.Drawing.Point(90, 119);
-            this.chbEmoliente.Name = "chbEmoliente";
-            this.chbEmoliente.Size = new System.Drawing.Size(20, 20);
-            this.chbEmoliente.TabIndex = 63;
-            // 
-            // chbFebrifugas
-            // 
-            this.chbFebrifugas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbFebrifugas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbFebrifugas.Checked = false;
-            this.chbFebrifugas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbFebrifugas.ForeColor = System.Drawing.Color.White;
-            this.chbFebrifugas.Location = new System.Drawing.Point(90, 53);
-            this.chbFebrifugas.Name = "chbFebrifugas";
-            this.chbFebrifugas.Size = new System.Drawing.Size(20, 20);
-            this.chbFebrifugas.TabIndex = 64;
-            // 
-            // chbvuelnerarias
-            // 
-            this.chbvuelnerarias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbvuelnerarias.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbvuelnerarias.Checked = false;
-            this.chbvuelnerarias.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbvuelnerarias.ForeColor = System.Drawing.Color.White;
-            this.chbvuelnerarias.Location = new System.Drawing.Point(90, 142);
-            this.chbvuelnerarias.Name = "chbvuelnerarias";
-            this.chbvuelnerarias.Size = new System.Drawing.Size(20, 20);
-            this.chbvuelnerarias.TabIndex = 67;
-            this.chbvuelnerarias.OnChange += new System.EventHandler(this.chbvuelnerarias_OnChange);
-            // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(295, 32);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(94, 17);
-            this.bunifuCustomLabel11.TabIndex = 59;
-            this.bunifuCustomLabel11.Text = "Emenágogas";
-            // 
-            // bunifuCustomLabel12
-            // 
-            this.bunifuCustomLabel12.AutoSize = true;
-            this.bunifuCustomLabel12.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel12.Location = new System.Drawing.Point(12, 118);
-            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
-            this.bunifuCustomLabel12.Size = new System.Drawing.Size(77, 17);
-            this.bunifuCustomLabel12.TabIndex = 68;
-            this.bunifuCustomLabel12.Text = "Emolientes";
-            // 
-            // bunifuCustomLabel13
-            // 
-            this.bunifuCustomLabel13.AutoSize = true;
-            this.bunifuCustomLabel13.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel13.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel13.Location = new System.Drawing.Point(136, 120);
-            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
-            this.bunifuCustomLabel13.Size = new System.Drawing.Size(87, 17);
-            this.bunifuCustomLabel13.TabIndex = 69;
-            this.bunifuCustomLabel13.Text = "Estimulantes";
-            // 
-            // bunifuCustomLabel14
-            // 
-            this.bunifuCustomLabel14.AutoSize = true;
-            this.bunifuCustomLabel14.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel14.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel14.Location = new System.Drawing.Point(294, 54);
-            this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
-            this.bunifuCustomLabel14.Size = new System.Drawing.Size(89, 17);
-            this.bunifuCustomLabel14.TabIndex = 70;
-            this.bunifuCustomLabel14.Text = "Estomacales";
-            // 
-            // bunifuCustomLabel15
-            // 
-            this.bunifuCustomLabel15.AutoSize = true;
-            this.bunifuCustomLabel15.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel15.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(294, 142);
-            this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(146, 17);
-            this.bunifuCustomLabel15.TabIndex = 71;
-            this.bunifuCustomLabel15.Text = "Expectorantes o pect";
-            // 
-            // bunifuCustomLabel16
-            // 
-            this.bunifuCustomLabel16.AutoSize = true;
-            this.bunifuCustomLabel16.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel16.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel16.Location = new System.Drawing.Point(12, 53);
-            this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
-            this.bunifuCustomLabel16.Size = new System.Drawing.Size(73, 17);
-            this.bunifuCustomLabel16.TabIndex = 72;
-            this.bunifuCustomLabel16.Text = "Febrífugas";
-            // 
-            // bunifuCustomLabel17
-            // 
-            this.bunifuCustomLabel17.AutoSize = true;
-            this.bunifuCustomLabel17.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel17.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel17.Location = new System.Drawing.Point(293, 76);
-            this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
-            this.bunifuCustomLabel17.Size = new System.Drawing.Size(96, 17);
-            this.bunifuCustomLabel17.TabIndex = 73;
-            this.bunifuCustomLabel17.Text = "Hemostáticas";
-            // 
-            // bunifuCustomLabel18
-            // 
-            this.bunifuCustomLabel18.AutoSize = true;
-            this.bunifuCustomLabel18.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel18.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(13, 77);
-            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
-            this.bunifuCustomLabel18.Size = new System.Drawing.Size(66, 17);
-            this.bunifuCustomLabel18.TabIndex = 74;
-            this.bunifuCustomLabel18.Text = "Eméticas";
-            // 
-            // bunifuCustomLabel19
-            // 
-            this.bunifuCustomLabel19.AutoSize = true;
-            this.bunifuCustomLabel19.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel19.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel19.Location = new System.Drawing.Point(295, 119);
-            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
-            this.bunifuCustomLabel19.Size = new System.Drawing.Size(142, 17);
-            this.bunifuCustomLabel19.TabIndex = 75;
-            this.bunifuCustomLabel19.Text = "Purgantes o laxantes";
-            // 
-            // bunifuCustomLabel20
-            // 
-            this.bunifuCustomLabel20.AutoSize = true;
-            this.bunifuCustomLabel20.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel20.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel20.Location = new System.Drawing.Point(294, 96);
-            this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
-            this.bunifuCustomLabel20.Size = new System.Drawing.Size(79, 17);
-            this.bunifuCustomLabel20.TabIndex = 76;
-            this.bunifuCustomLabel20.Text = "Resolutivas";
-            // 
-            // bunifuCustomLabel21
-            // 
-            this.bunifuCustomLabel21.AutoSize = true;
-            this.bunifuCustomLabel21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel21.Location = new System.Drawing.Point(136, 97);
-            this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
-            this.bunifuCustomLabel21.Size = new System.Drawing.Size(76, 17);
-            this.bunifuCustomLabel21.TabIndex = 77;
-            this.bunifuCustomLabel21.Text = "Sudoríficas";
-            // 
-            // bunifuCustomLabel22
-            // 
-            this.bunifuCustomLabel22.AutoSize = true;
-            this.bunifuCustomLabel22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel22.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(13, 12);
-            this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
-            this.bunifuCustomLabel22.Size = new System.Drawing.Size(55, 17);
-            this.bunifuCustomLabel22.TabIndex = 78;
-            this.bunifuCustomLabel22.Text = "Tónicas";
+            this.chbVermigugas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbVermigugas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbVermigugas.Checked = false;
+            this.chbVermigugas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbVermigugas.ForeColor = System.Drawing.Color.White;
+            this.chbVermigugas.Location = new System.Drawing.Point(643, 12);
+            this.chbVermigugas.Name = "chbVermigugas";
+            this.chbVermigugas.Size = new System.Drawing.Size(20, 20);
+            this.chbVermigugas.TabIndex = 96;
             // 
             // bunifuCustomLabel23
             // 
@@ -567,102 +268,6 @@
             this.bunifuCustomLabel23.Size = new System.Drawing.Size(141, 17);
             this.bunifuCustomLabel23.TabIndex = 79;
             this.bunifuCustomLabel23.Text = "Vermífugas o antihel";
-            // 
-            // bunifuCustomLabel24
-            // 
-            this.bunifuCustomLabel24.AutoSize = true;
-            this.bunifuCustomLabel24.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel24.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuCustomLabel24.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuCustomLabel24.Location = new System.Drawing.Point(12, 142);
-            this.bunifuCustomLabel24.Name = "bunifuCustomLabel24";
-            this.bunifuCustomLabel24.Size = new System.Drawing.Size(78, 17);
-            this.bunifuCustomLabel24.TabIndex = 80;
-            this.bunifuCustomLabel24.Text = "Vulnerarias";
-            // 
-            // chbDiureticas
-            // 
-            this.chbDiureticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbDiureticas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbDiureticas.Checked = false;
-            this.chbDiureticas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbDiureticas.ForeColor = System.Drawing.Color.White;
-            this.chbDiureticas.Location = new System.Drawing.Point(227, 142);
-            this.chbDiureticas.Name = "chbDiureticas";
-            this.chbDiureticas.Size = new System.Drawing.Size(20, 20);
-            this.chbDiureticas.TabIndex = 87;
-            // 
-            // chbAntisepticas
-            // 
-            this.chbAntisepticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbAntisepticas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbAntisepticas.Checked = false;
-            this.chbAntisepticas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbAntisepticas.ForeColor = System.Drawing.Color.White;
-            this.chbAntisepticas.Location = new System.Drawing.Point(227, 53);
-            this.chbAntisepticas.Name = "chbAntisepticas";
-            this.chbAntisepticas.Size = new System.Drawing.Size(20, 20);
-            this.chbAntisepticas.TabIndex = 86;
-            // 
-            // chbSudorificas
-            // 
-            this.chbSudorificas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbSudorificas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbSudorificas.Checked = false;
-            this.chbSudorificas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbSudorificas.ForeColor = System.Drawing.Color.White;
-            this.chbSudorificas.Location = new System.Drawing.Point(227, 96);
-            this.chbSudorificas.Name = "chbSudorificas";
-            this.chbSudorificas.Size = new System.Drawing.Size(20, 20);
-            this.chbSudorificas.TabIndex = 82;
-            // 
-            // chbEstimulante
-            // 
-            this.chbEstimulante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEstimulante.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbEstimulante.Checked = false;
-            this.chbEstimulante.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbEstimulante.ForeColor = System.Drawing.Color.White;
-            this.chbEstimulante.Location = new System.Drawing.Point(227, 119);
-            this.chbEstimulante.Name = "chbEstimulante";
-            this.chbEstimulante.Size = new System.Drawing.Size(20, 20);
-            this.chbEstimulante.TabIndex = 85;
-            // 
-            // chbAstringentes
-            // 
-            this.chbAstringentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbAstringentes.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbAstringentes.Checked = false;
-            this.chbAstringentes.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbAstringentes.ForeColor = System.Drawing.Color.White;
-            this.chbAstringentes.Location = new System.Drawing.Point(227, 32);
-            this.chbAstringentes.Name = "chbAstringentes";
-            this.chbAstringentes.Size = new System.Drawing.Size(20, 20);
-            this.chbAstringentes.TabIndex = 80;
-            // 
-            // chbCarminativas
-            // 
-            this.chbCarminativas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbCarminativas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbCarminativas.Checked = false;
-            this.chbCarminativas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbCarminativas.ForeColor = System.Drawing.Color.White;
-            this.chbCarminativas.Location = new System.Drawing.Point(227, 76);
-            this.chbCarminativas.Name = "chbCarminativas";
-            this.chbCarminativas.Size = new System.Drawing.Size(20, 20);
-            this.chbCarminativas.TabIndex = 84;
-            // 
-            // chbDepurativas
-            // 
-            this.chbDepurativas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbDepurativas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbDepurativas.Checked = false;
-            this.chbDepurativas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbDepurativas.ForeColor = System.Drawing.Color.White;
-            this.chbDepurativas.Location = new System.Drawing.Point(227, 9);
-            this.chbDepurativas.Name = "chbDepurativas";
-            this.chbDepurativas.Size = new System.Drawing.Size(20, 20);
-            this.chbDepurativas.TabIndex = 81;
             // 
             // chbexpectorante
             // 
@@ -748,17 +353,426 @@
             this.chbDesobtruyentes.Size = new System.Drawing.Size(20, 20);
             this.chbDesobtruyentes.TabIndex = 89;
             // 
-            // chbVermigugas
+            // bunifuCustomLabel24
             // 
-            this.chbVermigugas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbVermigugas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbVermigugas.Checked = false;
-            this.chbVermigugas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbVermigugas.ForeColor = System.Drawing.Color.White;
-            this.chbVermigugas.Location = new System.Drawing.Point(643, 12);
-            this.chbVermigugas.Name = "chbVermigugas";
-            this.chbVermigugas.Size = new System.Drawing.Size(20, 20);
-            this.chbVermigugas.TabIndex = 96;
+            this.bunifuCustomLabel24.AutoSize = true;
+            this.bunifuCustomLabel24.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel24.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel24.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel24.Location = new System.Drawing.Point(12, 142);
+            this.bunifuCustomLabel24.Name = "bunifuCustomLabel24";
+            this.bunifuCustomLabel24.Size = new System.Drawing.Size(78, 17);
+            this.bunifuCustomLabel24.TabIndex = 80;
+            this.bunifuCustomLabel24.Text = "Vulnerarias";
+            // 
+            // bunifuCustomLabel20
+            // 
+            this.bunifuCustomLabel20.AutoSize = true;
+            this.bunifuCustomLabel20.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel20.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel20.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel20.Location = new System.Drawing.Point(294, 96);
+            this.bunifuCustomLabel20.Name = "bunifuCustomLabel20";
+            this.bunifuCustomLabel20.Size = new System.Drawing.Size(79, 17);
+            this.bunifuCustomLabel20.TabIndex = 76;
+            this.bunifuCustomLabel20.Text = "Resolutivas";
+            // 
+            // chbDiureticas
+            // 
+            this.chbDiureticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbDiureticas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbDiureticas.Checked = false;
+            this.chbDiureticas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbDiureticas.ForeColor = System.Drawing.Color.White;
+            this.chbDiureticas.Location = new System.Drawing.Point(227, 142);
+            this.chbDiureticas.Name = "chbDiureticas";
+            this.chbDiureticas.Size = new System.Drawing.Size(20, 20);
+            this.chbDiureticas.TabIndex = 87;
+            // 
+            // bunifuCustomLabel19
+            // 
+            this.bunifuCustomLabel19.AutoSize = true;
+            this.bunifuCustomLabel19.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel19.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel19.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel19.Location = new System.Drawing.Point(295, 119);
+            this.bunifuCustomLabel19.Name = "bunifuCustomLabel19";
+            this.bunifuCustomLabel19.Size = new System.Drawing.Size(142, 17);
+            this.bunifuCustomLabel19.TabIndex = 75;
+            this.bunifuCustomLabel19.Text = "Purgantes o laxantes";
+            // 
+            // chbAntisepticas
+            // 
+            this.chbAntisepticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbAntisepticas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbAntisepticas.Checked = false;
+            this.chbAntisepticas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbAntisepticas.ForeColor = System.Drawing.Color.White;
+            this.chbAntisepticas.Location = new System.Drawing.Point(227, 53);
+            this.chbAntisepticas.Name = "chbAntisepticas";
+            this.chbAntisepticas.Size = new System.Drawing.Size(20, 20);
+            this.chbAntisepticas.TabIndex = 86;
+            // 
+            // chbSudorificas
+            // 
+            this.chbSudorificas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbSudorificas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbSudorificas.Checked = false;
+            this.chbSudorificas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbSudorificas.ForeColor = System.Drawing.Color.White;
+            this.chbSudorificas.Location = new System.Drawing.Point(227, 96);
+            this.chbSudorificas.Name = "chbSudorificas";
+            this.chbSudorificas.Size = new System.Drawing.Size(20, 20);
+            this.chbSudorificas.TabIndex = 82;
+            // 
+            // bunifuCustomLabel18
+            // 
+            this.bunifuCustomLabel18.AutoSize = true;
+            this.bunifuCustomLabel18.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel18.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel18.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(13, 77);
+            this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
+            this.bunifuCustomLabel18.Size = new System.Drawing.Size(66, 17);
+            this.bunifuCustomLabel18.TabIndex = 74;
+            this.bunifuCustomLabel18.Text = "Eméticas";
+            // 
+            // chbEstimulante
+            // 
+            this.chbEstimulante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEstimulante.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEstimulante.Checked = false;
+            this.chbEstimulante.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbEstimulante.ForeColor = System.Drawing.Color.White;
+            this.chbEstimulante.Location = new System.Drawing.Point(227, 119);
+            this.chbEstimulante.Name = "chbEstimulante";
+            this.chbEstimulante.Size = new System.Drawing.Size(20, 20);
+            this.chbEstimulante.TabIndex = 85;
+            // 
+            // bunifuCustomLabel21
+            // 
+            this.bunifuCustomLabel21.AutoSize = true;
+            this.bunifuCustomLabel21.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel21.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel21.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel21.Location = new System.Drawing.Point(136, 97);
+            this.bunifuCustomLabel21.Name = "bunifuCustomLabel21";
+            this.bunifuCustomLabel21.Size = new System.Drawing.Size(76, 17);
+            this.bunifuCustomLabel21.TabIndex = 77;
+            this.bunifuCustomLabel21.Text = "Sudoríficas";
+            // 
+            // chbAstringentes
+            // 
+            this.chbAstringentes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbAstringentes.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbAstringentes.Checked = false;
+            this.chbAstringentes.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbAstringentes.ForeColor = System.Drawing.Color.White;
+            this.chbAstringentes.Location = new System.Drawing.Point(227, 32);
+            this.chbAstringentes.Name = "chbAstringentes";
+            this.chbAstringentes.Size = new System.Drawing.Size(20, 20);
+            this.chbAstringentes.TabIndex = 80;
+            // 
+            // bunifuCustomLabel22
+            // 
+            this.bunifuCustomLabel22.AutoSize = true;
+            this.bunifuCustomLabel22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel22.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel22.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel22.Location = new System.Drawing.Point(13, 12);
+            this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
+            this.bunifuCustomLabel22.Size = new System.Drawing.Size(55, 17);
+            this.bunifuCustomLabel22.TabIndex = 78;
+            this.bunifuCustomLabel22.Text = "Tónicas";
+            // 
+            // chbCarminativas
+            // 
+            this.chbCarminativas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbCarminativas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbCarminativas.Checked = false;
+            this.chbCarminativas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbCarminativas.ForeColor = System.Drawing.Color.White;
+            this.chbCarminativas.Location = new System.Drawing.Point(227, 76);
+            this.chbCarminativas.Name = "chbCarminativas";
+            this.chbCarminativas.Size = new System.Drawing.Size(20, 20);
+            this.chbCarminativas.TabIndex = 84;
+            // 
+            // bunifuCustomLabel17
+            // 
+            this.bunifuCustomLabel17.AutoSize = true;
+            this.bunifuCustomLabel17.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel17.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel17.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel17.Location = new System.Drawing.Point(293, 76);
+            this.bunifuCustomLabel17.Name = "bunifuCustomLabel17";
+            this.bunifuCustomLabel17.Size = new System.Drawing.Size(96, 17);
+            this.bunifuCustomLabel17.TabIndex = 73;
+            this.bunifuCustomLabel17.Text = "Hemostáticas";
+            // 
+            // chbDepurativas
+            // 
+            this.chbDepurativas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbDepurativas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbDepurativas.Checked = false;
+            this.chbDepurativas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbDepurativas.ForeColor = System.Drawing.Color.White;
+            this.chbDepurativas.Location = new System.Drawing.Point(227, 9);
+            this.chbDepurativas.Name = "chbDepurativas";
+            this.chbDepurativas.Size = new System.Drawing.Size(20, 20);
+            this.chbDepurativas.TabIndex = 81;
+            // 
+            // bunifuCustomLabel16
+            // 
+            this.bunifuCustomLabel16.AutoSize = true;
+            this.bunifuCustomLabel16.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel16.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel16.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel16.Location = new System.Drawing.Point(12, 53);
+            this.bunifuCustomLabel16.Name = "bunifuCustomLabel16";
+            this.bunifuCustomLabel16.Size = new System.Drawing.Size(73, 17);
+            this.bunifuCustomLabel16.TabIndex = 72;
+            this.bunifuCustomLabel16.Text = "Febrífugas";
+            // 
+            // chbvuelnerarias
+            // 
+            this.chbvuelnerarias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbvuelnerarias.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbvuelnerarias.Checked = false;
+            this.chbvuelnerarias.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbvuelnerarias.ForeColor = System.Drawing.Color.White;
+            this.chbvuelnerarias.Location = new System.Drawing.Point(90, 142);
+            this.chbvuelnerarias.Name = "chbvuelnerarias";
+            this.chbvuelnerarias.Size = new System.Drawing.Size(20, 20);
+            this.chbvuelnerarias.TabIndex = 67;
+            this.chbvuelnerarias.OnChange += new System.EventHandler(this.chbvuelnerarias_OnChange);
+            // 
+            // bunifuCustomLabel15
+            // 
+            this.bunifuCustomLabel15.AutoSize = true;
+            this.bunifuCustomLabel15.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel15.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel15.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(294, 142);
+            this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(146, 17);
+            this.bunifuCustomLabel15.TabIndex = 71;
+            this.bunifuCustomLabel15.Text = "Expectorantes o pect";
+            // 
+            // chbFebrifugas
+            // 
+            this.chbFebrifugas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbFebrifugas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbFebrifugas.Checked = false;
+            this.chbFebrifugas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbFebrifugas.ForeColor = System.Drawing.Color.White;
+            this.chbFebrifugas.Location = new System.Drawing.Point(90, 53);
+            this.chbFebrifugas.Name = "chbFebrifugas";
+            this.chbFebrifugas.Size = new System.Drawing.Size(20, 20);
+            this.chbFebrifugas.TabIndex = 64;
+            // 
+            // bunifuCustomLabel14
+            // 
+            this.bunifuCustomLabel14.AutoSize = true;
+            this.bunifuCustomLabel14.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel14.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel14.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel14.Location = new System.Drawing.Point(294, 54);
+            this.bunifuCustomLabel14.Name = "bunifuCustomLabel14";
+            this.bunifuCustomLabel14.Size = new System.Drawing.Size(89, 17);
+            this.bunifuCustomLabel14.TabIndex = 70;
+            this.bunifuCustomLabel14.Text = "Estomacales";
+            // 
+            // bunifuCustomLabel13
+            // 
+            this.bunifuCustomLabel13.AutoSize = true;
+            this.bunifuCustomLabel13.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel13.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel13.Location = new System.Drawing.Point(136, 120);
+            this.bunifuCustomLabel13.Name = "bunifuCustomLabel13";
+            this.bunifuCustomLabel13.Size = new System.Drawing.Size(87, 17);
+            this.bunifuCustomLabel13.TabIndex = 69;
+            this.bunifuCustomLabel13.Text = "Estimulantes";
+            // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.AutoSize = true;
+            this.bunifuCustomLabel12.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel12.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(12, 118);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(77, 17);
+            this.bunifuCustomLabel12.TabIndex = 68;
+            this.bunifuCustomLabel12.Text = "Emolientes";
+            // 
+            // chbApetente
+            // 
+            this.chbApetente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbApetente.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbApetente.Checked = false;
+            this.chbApetente.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbApetente.ForeColor = System.Drawing.Color.White;
+            this.chbApetente.Location = new System.Drawing.Point(90, 96);
+            this.chbApetente.Name = "chbApetente";
+            this.chbApetente.Size = new System.Drawing.Size(20, 20);
+            this.chbApetente.TabIndex = 60;
+            // 
+            // chbEmoliente
+            // 
+            this.chbEmoliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEmoliente.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEmoliente.Checked = false;
+            this.chbEmoliente.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbEmoliente.ForeColor = System.Drawing.Color.White;
+            this.chbEmoliente.Location = new System.Drawing.Point(90, 119);
+            this.chbEmoliente.Name = "chbEmoliente";
+            this.chbEmoliente.Size = new System.Drawing.Size(20, 20);
+            this.chbEmoliente.TabIndex = 63;
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.AutoSize = true;
+            this.bunifuCustomLabel11.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(295, 32);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(94, 17);
+            this.bunifuCustomLabel11.TabIndex = 59;
+            this.bunifuCustomLabel11.Text = "Emenágogas";
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(136, 143);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(71, 17);
+            this.bunifuCustomLabel10.TabIndex = 58;
+            this.bunifuCustomLabel10.Text = "Diuréticas";
+            // 
+            // chbEmetica
+            // 
+            this.chbEmetica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEmetica.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbEmetica.Checked = false;
+            this.chbEmetica.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbEmetica.ForeColor = System.Drawing.Color.White;
+            this.chbEmetica.Location = new System.Drawing.Point(90, 76);
+            this.chbEmetica.Name = "chbEmetica";
+            this.chbEmetica.Size = new System.Drawing.Size(20, 20);
+            this.chbEmetica.TabIndex = 62;
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(295, 9);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(106, 17);
+            this.bunifuCustomLabel9.TabIndex = 56;
+            this.bunifuCustomLabel9.Text = "Desobtruyentes";
+            // 
+            // chbtonicas
+            // 
+            this.chbtonicas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbtonicas.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.chbtonicas.Checked = false;
+            this.chbtonicas.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
+            this.chbtonicas.ForeColor = System.Drawing.Color.White;
+            this.chbtonicas.Location = new System.Drawing.Point(90, 11);
+            this.chbtonicas.Name = "chbtonicas";
+            this.chbtonicas.Size = new System.Drawing.Size(20, 20);
+            this.chbtonicas.TabIndex = 59;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(135, 9);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(86, 17);
+            this.bunifuCustomLabel8.TabIndex = 54;
+            this.bunifuCustomLabel8.Text = "Depurativas";
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(135, 76);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(95, 17);
+            this.bunifuCustomLabel7.TabIndex = 52;
+            this.bunifuCustomLabel7.Text = "Carminativas";
+            // 
+            // chbcalmante
+            // 
+            this.chbcalmante.AutoSize = true;
+            this.chbcalmante.BackColor = System.Drawing.SystemColors.Control;
+            this.chbcalmante.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.chbcalmante.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.chbcalmante.Location = new System.Drawing.Point(496, 43);
+            this.chbcalmante.Name = "chbcalmante";
+            this.chbcalmante.Size = new System.Drawing.Size(152, 17);
+            this.chbcalmante.TabIndex = 50;
+            this.chbcalmante.Text = "Calmantes o sedativa";
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(13, 32);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(65, 17);
+            this.bunifuCustomLabel5.TabIndex = 48;
+            this.bunifuCustomLabel5.Text = "Béquicas";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(136, 32);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(85, 17);
+            this.bunifuCustomLabel4.TabIndex = 46;
+            this.bunifuCustomLabel4.Text = "Astringentes";
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.AutoSize = true;
+            this.bunifuCustomLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(11, 96);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(73, 17);
+            this.bunifuCustomLabel3.TabIndex = 44;
+            this.bunifuCustomLabel3.Text = "Apetentes";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(136, 54);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(85, 17);
+            this.bunifuCustomLabel2.TabIndex = 42;
+            this.bunifuCustomLabel2.Text = "Antisépticas";
             // 
             // bunifuCustomLabel25
             // 
@@ -786,6 +800,15 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(413, 206);
             this.bunifuGradientPanel2.TabIndex = 98;
+            // 
+            // pcImagen
+            // 
+            this.pcImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcImagen.Location = new System.Drawing.Point(8, 6);
+            this.pcImagen.Name = "pcImagen";
+            this.pcImagen.Size = new System.Drawing.Size(397, 191);
+            this.pcImagen.TabIndex = 0;
+            this.pcImagen.TabStop = false;
             // 
             // bunifuCustomLabel26
             // 
@@ -866,18 +889,6 @@
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // chbCalmanteSedativa
-            // 
-            this.chbCalmanteSedativa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbCalmanteSedativa.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.chbCalmanteSedativa.Checked = false;
-            this.chbCalmanteSedativa.CheckedOnColor = System.Drawing.Color.LightSeaGreen;
-            this.chbCalmanteSedativa.ForeColor = System.Drawing.Color.White;
-            this.chbCalmanteSedativa.Location = new System.Drawing.Point(643, 38);
-            this.chbCalmanteSedativa.Name = "chbCalmanteSedativa";
-            this.chbCalmanteSedativa.Size = new System.Drawing.Size(20, 20);
-            this.chbCalmanteSedativa.TabIndex = 97;
-            // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
@@ -890,20 +901,27 @@
             this.bunifuCustomLabel1.TabIndex = 106;
             this.bunifuCustomLabel1.Text = "0";
             // 
-            // pcImagen
+            // listBox1
             // 
-            this.pcImagen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pcImagen.Location = new System.Drawing.Point(0, 0);
-            this.pcImagen.Name = "pcImagen";
-            this.pcImagen.Size = new System.Drawing.Size(413, 206);
-            this.pcImagen.TabIndex = 0;
-            this.pcImagen.TabStop = false;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
+            this.listBox1.Location = new System.Drawing.Point(678, 28);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 107;
             // 
             // e
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 504);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
@@ -925,10 +943,10 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -997,5 +1015,6 @@
         private Bunifu.Framework.UI.BunifuCheckbox chbCalmanteSedativa;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pcImagen;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

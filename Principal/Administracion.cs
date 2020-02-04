@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Principal
 {
     public partial class e : Form
     {
+        Planta planta;
         public e()
         {
             InitializeComponent();
+            planta = new Planta();
         }
 
         private void chbvuelnerarias_OnChange(object sender, EventArgs e)
@@ -46,6 +49,11 @@ namespace Principal
             {
                     //pcImagen.Image.=Image.FromFile.(examinar)
             }
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
