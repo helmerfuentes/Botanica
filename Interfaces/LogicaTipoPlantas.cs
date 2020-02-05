@@ -11,20 +11,20 @@ namespace logica
    public class LogicaTipoPlantas
     {
         
-        public ArrayList plantas;
-        public DatosTipoPlanta DatosTipoPlanta;
+        private ArrayList TipoPlantas;
+        private DatosTipoPlanta DatosTipoPlanta;
         public LogicaTipoPlantas()
         {
             DatosTipoPlanta = new DatosTipoPlanta();
-            plantas = new ArrayList();
+            TipoPlantas = new ArrayList();
         }
-        //public ArrayList getAll()
-        //{
-        //    string sql = "select *from tipo";
-        //    return plantas = DatosTipoPlanta.gellAll(sql);
+        public ArrayList getAll()
+        {
+            string sql = "select *from tipo";
+            return TipoPlantas = DatosTipoPlanta.gellAll(sql);
 
 
-        //}
+        }
 
     }
 }

@@ -16,6 +16,8 @@ namespace Entidades
 
         public Planta()
         {
+            tipoPlanta = new List<TipoPlanta>();
+            imagenes = new List<byte[]>();
 
         }
 
@@ -32,13 +34,14 @@ namespace Entidades
             this.codigo = codigo;
             this.nombre = nombre;
             this.descripcion = descripcion;
-            this.tipoPlanta = tipoPlanta;
-            this.imagenes = imagenes;
+            this.TipoPlanta = tipoPlanta;
+            this.Imagenes = imagenes;
         }
 
         public int Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
-
+        public List<TipoPlanta> TipoPlanta { get => tipoPlanta; set => tipoPlanta = value; }
+        public List<byte[]> Imagenes { get => imagenes; set => imagenes = value; }
     }
 }

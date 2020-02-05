@@ -1,6 +1,7 @@
 ﻿
-//using MySql.Data;
+
 //using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,12 +12,14 @@ namespace Datos
 {
    public class Conexion
     {
-        //public MySqlConnection connection;
+        public MySqlConnection connection;
         private const string servidor = "127.0.0.1";
         private const string puerto = "3306";
         private const string usuario = "root";
         private const string password = "";
         private const string database = "botanica";
+
+        public MySqlCommand cmd;
 
 
         //Cadena de conexion
@@ -31,8 +34,8 @@ namespace Datos
             try
             {
 
-                //connection = new MySqlConnection(connectionString);
-                //connection.Open();
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
                 Console.WriteLine("conexion exitosa");
                 return true;
             }
@@ -48,8 +51,8 @@ namespace Datos
         {
             try
             {
-                //connection = new MySqlConnection(connectionString);
-                //connection.Close();
+                connection = new MySqlConnection(connectionString);
+                connection.Close();
                 return true;
             }
             catch (Exception)
