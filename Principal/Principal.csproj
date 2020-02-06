@@ -82,11 +82,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administracion.cs">
+    <Compile Include="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administracion.Designer.cs">
-      <DependentUpon>Administracion.cs</DependentUpon>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Antisepticas.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,17 @@
     <Compile Include="Antisepticas.Designer.cs">
       <DependentUpon>Antisepticas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Astringentes.cs">
+    <Compile Include="plantaItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="plantaItem.Designer.cs">
+      <DependentUpon>plantaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Astringentes.Designer.cs">
-      <DependentUpon>Astringentes.cs</DependentUpon>
+    <Compile Include="VistaGeneral.Designer.cs">
+      <DependentUpon>VistaGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -114,14 +120,17 @@
     <Compile Include="prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Administracion.resx">
-      <DependentUpon>Administracion.cs</DependentUpon>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Antisepticas.resx">
       <DependentUpon>Antisepticas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Astringentes.resx">
-      <DependentUpon>Astringentes.cs</DependentUpon>
+    <EmbeddedResource Include="plantaItem.resx">
+      <DependentUpon>plantaItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaGeneral.resx">
+      <DependentUpon>VistaGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
