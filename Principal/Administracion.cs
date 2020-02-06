@@ -83,7 +83,16 @@ namespace Principal
 
                 Planta.Nombre = txtnombrePlanta.Text;
                 Planta.Descripcion = txtDescripcionPlanta.Text;
-                LogicaPlanta.addPlanta(Planta);
+                if (LogicaPlanta.addPlanta(Planta))
+                {
+                    MessageBox.Show("Registro Exitoso");
+                    limpiar();
+                    Planta = new Planta();
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar");
+                }
 
                 
      
@@ -91,6 +100,15 @@ namespace Principal
 
 
             }
+        }
+
+        private void limpiar()
+        {
+            this.txtDescripcionPlanta.Text = "";
+            this.txtnombrePlanta.Text = "";
+            this.jlbCantidadImagenes.Text = "0";
+            cargarClasificacionPlantas();
+
         }
 
         private bool validar()

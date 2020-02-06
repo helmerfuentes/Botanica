@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Astringentes));
             this.transparentControl1 = new TransControl_src.TransparentControl();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -70,8 +71,8 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.informacion = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.transparentControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -101,7 +102,6 @@
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.SuspendLayout();
             // 
             // transparentControl1
@@ -123,6 +123,20 @@
             this.transparentControl1.Text = "transparentControl1";
             this.transparentControl1.Transparent = true;
             this.transparentControl1.Click += new System.EventHandler(this.TransparentControl1_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.White;
+            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
+            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox18.Location = new System.Drawing.Point(81, 713);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(53, 45);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 14;
+            this.pictureBox18.TabStop = false;
             // 
             // pictureBox17
             // 
@@ -231,7 +245,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 144);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 118);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -669,20 +683,6 @@
             this.informacion.TabIndex = 31;
             this.informacion.Text = resources.GetString("informacion.Text");
             // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.White;
-            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
-            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox18.Location = new System.Drawing.Point(81, 713);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(53, 45);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 14;
-            this.pictureBox18.TabStop = false;
-            // 
             // Astringentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,6 +699,7 @@
             this.Text = "Astringentes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.transparentControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
@@ -737,7 +738,6 @@
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
