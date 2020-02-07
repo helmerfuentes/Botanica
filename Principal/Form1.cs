@@ -156,5 +156,12 @@ namespace Principal
         {
             abrirformulario(boton);
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            e admin = new e();
+            this.Hide();
+            admin.Show();
+        }
     }
 }

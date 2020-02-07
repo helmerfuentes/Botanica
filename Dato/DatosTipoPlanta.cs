@@ -15,13 +15,15 @@ namespace Dato
     {
 
 
-
+        MySqlTransaction tr = null;
         public int idTipoPlanta(string nombreTipo)
         {
             conectar();
             string sql = "select idTipo from tipo where tipo=@tipo";
             cmd = new MySqlCommand(sql, connection);
-            cmd.Parameters.Add("tipo", nombreTipo);
+           
+            cmd.Parameters.AddWithValue("tipo", nombreTipo);
+            
             MySqlDataReader myReader = cmd.ExecuteReader();
             while (myReader.Read())
             {
@@ -79,6 +81,8 @@ namespace Dato
 
 
                     cmd = new MySqlCommand(sql, connection);
+                    tr=connection.BeginTransaction();
+                    cmd.Transaction = tr;
 
                     foreach (TipoPlanta  item in tipos)
                     {
@@ -93,6 +97,7 @@ namespace Dato
 
 
                 }
+                tr.Commit();
                 return true;
             }
             catch (Exception e)

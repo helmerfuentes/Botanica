@@ -35,22 +35,24 @@
             // 
             // pctImagen
             // 
-            this.pctImagen.Image = global::Principal.Properties.Resources.Anamu__3_;
+            //this.pctImagen.Image = global::Principal.Properties.Resources.Anamu__3_;
             this.pctImagen.Location = new System.Drawing.Point(1, 0);
             this.pctImagen.Name = "pctImagen";
             this.pctImagen.Size = new System.Drawing.Size(170, 141);
             this.pctImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctImagen.TabIndex = 0;
             this.pctImagen.TabStop = false;
+            this.pctImagen.Click += new System.EventHandler(this.pctImagen_Click);
             // 
             // txtnombre
             // 
             this.txtnombre.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtnombre.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.txtnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtnombre.Location = new System.Drawing.Point(3, 147);
+            this.txtnombre.Location = new System.Drawing.Point(1, 147);
             this.txtnombre.Multiline = true;
             this.txtnombre.Name = "txtnombre";
+            this.txtnombre.ReadOnly = true;
             this.txtnombre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtnombre.Size = new System.Drawing.Size(168, 29);
             this.txtnombre.TabIndex = 2;
@@ -61,10 +63,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.pctImagen);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "plantaItem";
-            this.Size = new System.Drawing.Size(171, 179);
+            this.Size = new System.Drawing.Size(167, 175);
             ((System.ComponentModel.ISupportInitialize)(this.pctImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

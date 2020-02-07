@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>C:\Users\elmer\OneDrive\Documents\Project Alvaro\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,6 +60,12 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>G:\BORRAR\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -88,17 +94,16 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Antisepticas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Antisepticas.Designer.cs">
-      <DependentUpon>Antisepticas.cs</DependentUpon>
-    </Compile>
     <Compile Include="plantaItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="plantaItem.Designer.cs">
       <DependentUpon>plantaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="VistaGeneral.cs">
       <SubType>Form</SubType>
@@ -114,17 +119,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Antisepticas.resx">
-      <DependentUpon>Antisepticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantaItem.resx">
       <DependentUpon>plantaItem.cs</DependentUpon>
@@ -140,19 +136,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Principal_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -186,15 +175,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="plantas\plantas helmer\Anamu %283%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\llarumbo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\paraiso %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\NoImageFound.jpg.png" />
   </ItemGroup>
   <ItemGroup>
@@ -207,28 +187,7 @@
     <None Include="Resources\RIK.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="plantas\plantas helmer\salvia.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\salbia %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\chicorion %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\lengua Suegra.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas pozo\Verdolaga.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas pozo\Arbustos.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\tua tua %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="plantas\plantas helmer\ortiga.jpg" />
+    <None Include="Resources\archivos-y-carpetas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

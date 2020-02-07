@@ -32,25 +32,25 @@
             this.transparentControl1 = new TransControl_src.TransparentControl();
             this.transparentControl3 = new TransControl_src.TransparentControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSiguiente = new System.Windows.Forms.PictureBox();
+            this.jlbnombre = new System.Windows.Forms.Label();
+            this.btnAnterior = new System.Windows.Forms.PictureBox();
             this.pictureBoxZoom = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.txtdescripcion = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.informacion = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.plantaItem1 = new Principal.plantaItem();
             this.transparentControl1.SuspendLayout();
             this.transparentControl3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            this.tableLayoutPanel8.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -60,9 +60,8 @@
             // transparentControl1
             // 
             this.transparentControl1.Controls.Add(this.transparentControl3);
-            this.transparentControl1.Controls.Add(this.pictureBox18);
+            this.transparentControl1.Controls.Add(this.panel1);
             this.transparentControl1.Controls.Add(this.pictureBox17);
-            this.transparentControl1.Controls.Add(this.tableLayoutPanel8);
             this.transparentControl1.Controls.Add(this.pictureBox1);
             this.transparentControl1.Controls.Add(this.groupBox9);
             this.transparentControl1.Controls.Add(this.pictureBox10);
@@ -75,6 +74,7 @@
             this.transparentControl1.TabIndex = 2;
             this.transparentControl1.Text = "transparentControl1";
             this.transparentControl1.Transparent = true;
+            this.transparentControl1.TransparentColor = System.Drawing.Color.LightYellow;
             // 
             // transparentControl3
             // 
@@ -84,7 +84,7 @@
             this.transparentControl3.Location = new System.Drawing.Point(433, 133);
             this.transparentControl3.MinimumSize = new System.Drawing.Size(100, 75);
             this.transparentControl3.Name = "transparentControl3";
-            this.transparentControl3.Opacity = 0.12D;
+            this.transparentControl3.Opacity = 0.04D;
             this.transparentControl3.Size = new System.Drawing.Size(742, 643);
             this.transparentControl3.TabIndex = 33;
             this.transparentControl3.Text = "transparentControl3";
@@ -93,27 +93,91 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.plantaItem1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(742, 643);
             this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
             // 
-            // pictureBox18
+            // panel1
             // 
-            this.pictureBox18.BackColor = System.Drawing.Color.White;
-            this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
-            this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox18.Location = new System.Drawing.Point(81, 713);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(53, 45);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 14;
-            this.pictureBox18.TabStop = false;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.btnSiguiente);
+            this.panel1.Controls.Add(this.jlbnombre);
+            this.panel1.Controls.Add(this.btnAnterior);
+            this.panel1.Controls.Add(this.pictureBoxZoom);
+            this.panel1.Controls.Add(this.txtdescripcion);
+            this.panel1.Location = new System.Drawing.Point(25, 283);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(366, 376);
+            this.panel1.TabIndex = 35;
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSiguiente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.Image")));
+            this.btnSiguiente.Location = new System.Drawing.Point(177, 327);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(42, 30);
+            this.btnSiguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSiguiente.TabIndex = 35;
+            this.btnSiguiente.TabStop = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // jlbnombre
+            // 
+            this.jlbnombre.AutoSize = true;
+            this.jlbnombre.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jlbnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.jlbnombre.Location = new System.Drawing.Point(123, 3);
+            this.jlbnombre.Name = "jlbnombre";
+            this.jlbnombre.Size = new System.Drawing.Size(105, 18);
+            this.jlbnombre.TabIndex = 2;
+            this.jlbnombre.Text = " CHICORION";
+            this.jlbnombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAnterior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
+            this.btnAnterior.Location = new System.Drawing.Point(129, 327);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(42, 30);
+            this.btnAnterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAnterior.TabIndex = 34;
+            this.btnAnterior.TabStop = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // pictureBoxZoom
+            // 
+            this.pictureBoxZoom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxZoom.BackColor = System.Drawing.Color.White;
+            this.pictureBoxZoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxZoom.Location = new System.Drawing.Point(8, 39);
+            this.pictureBoxZoom.Name = "pictureBoxZoom";
+            this.pictureBoxZoom.Size = new System.Drawing.Size(358, 236);
+            this.pictureBoxZoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxZoom.TabIndex = 0;
+            this.pictureBoxZoom.TabStop = false;
+            // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdescripcion.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescripcion.Location = new System.Drawing.Point(5, 279);
+            this.txtdescripcion.Multiline = true;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(358, 43);
+            this.txtdescripcion.TabIndex = 3;
+            this.txtdescripcion.Text = "Daño en el Estomago, mala digestión";
+            this.txtdescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox17
             // 
@@ -122,7 +186,7 @@
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox17.Location = new System.Drawing.Point(12, 713);
+            this.pictureBox17.Location = new System.Drawing.Point(154, 692);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(53, 45);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,79 +194,26 @@
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.PictureBox17_Click);
             // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tableLayoutPanel8.BackColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.pictureBoxZoom, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.bunifuCustomTextbox1, 0, 2);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(23, 316);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 3;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.65221F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.34779F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(364, 321);
-            this.tableLayoutPanel8.TabIndex = 12;
-            // 
-            // pictureBoxZoom
-            // 
-            this.pictureBoxZoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBoxZoom.Image = global::Principal.Properties.Resources.chicorion__2_;
-            this.pictureBoxZoom.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxZoom.Name = "pictureBoxZoom";
-            this.pictureBoxZoom.Size = new System.Drawing.Size(358, 236);
-            this.pictureBoxZoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxZoom.TabIndex = 0;
-            this.pictureBoxZoom.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(3, 242);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(128, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "               CHICORION";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomTextbox1
-            // 
-            this.bunifuCustomTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(3, 265);
-            this.bunifuCustomTextbox1.Multiline = true;
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(358, 53);
-            this.bunifuCustomTextbox1.TabIndex = 3;
-            this.bunifuCustomTextbox1.Text = "Daño en el Estomago, mala digestión";
-            this.bunifuCustomTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Principal.Properties.Resources.RIK;
-            this.pictureBox1.Location = new System.Drawing.Point(81, 118);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 133);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 182);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(258, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // groupBox9
             // 
+            this.groupBox9.BackColor = System.Drawing.Color.DarkRed;
             this.groupBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox9.Controls.Add(this.pictureBox9);
             this.groupBox9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.ForeColor = System.Drawing.Color.Maroon;
             this.groupBox9.Location = new System.Drawing.Point(-429, 388);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(227, 153);
@@ -242,20 +253,11 @@
             this.informacion.TabIndex = 31;
             this.informacion.Text = resources.GetString("informacion.Text");
             // 
-            // plantaItem1
-            // 
-            this.plantaItem1.imagen = null;
-            this.plantaItem1.Location = new System.Drawing.Point(3, 3);
-            this.plantaItem1.Name = "plantaItem1";
-            this.plantaItem1.nombre = null;
-            this.plantaItem1.Size = new System.Drawing.Size(171, 179);
-            this.plantaItem1.TabIndex = 0;
-            // 
             // VistaGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Principal.Properties.Resources.fondo2;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1187, 788);
             this.ControlBox = false;
@@ -268,12 +270,12 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.transparentControl1.ResumeLayout(false);
             this.transparentControl3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel8.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -290,14 +292,14 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox informacion;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.PictureBox pictureBoxZoom;
-        private System.Windows.Forms.Label label7;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private System.Windows.Forms.Label jlbnombre;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox txtdescripcion;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private TransControl_src.TransparentControl transparentControl3;
+        private System.Windows.Forms.PictureBox btnAnterior;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox btnSiguiente;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private plantaItem plantaItem1;
+        private TransControl_src.TransparentControl transparentControl3;
     }
 }

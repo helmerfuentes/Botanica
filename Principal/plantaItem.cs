@@ -21,6 +21,16 @@ namespace Principal
       
         private Image _imagen;
 
+        private int _indiceLista;
+
+        [Category("Custom Props")]
+        public int indiceLista
+        {
+            get { return _indiceLista; }
+            set { _indiceLista = value; }
+        }
+
+
         [Category("Custom Props")]
         public Image imagen
         {
@@ -35,10 +45,8 @@ namespace Principal
             set { _nombre = value; txtnombre.Text = value; }
         }
 
-        
-
-
-
-
+        private void pctImagen_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
