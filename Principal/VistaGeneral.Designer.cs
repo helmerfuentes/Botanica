@@ -84,11 +84,12 @@
             this.transparentControl3.Location = new System.Drawing.Point(433, 133);
             this.transparentControl3.MinimumSize = new System.Drawing.Size(100, 75);
             this.transparentControl3.Name = "transparentControl3";
-            this.transparentControl3.Opacity = 0.04D;
+            this.transparentControl3.Opacity = 0.14D;
             this.transparentControl3.Size = new System.Drawing.Size(742, 643);
             this.transparentControl3.TabIndex = 33;
             this.transparentControl3.Text = "transparentControl3";
             this.transparentControl3.Transparent = true;
+            this.transparentControl3.TransparentColor = System.Drawing.Color.Gainsboro;
             // 
             // flowLayoutPanel1
             // 
@@ -198,7 +199,6 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Principal.Properties.Resources.RIK;
             this.pictureBox1.Location = new System.Drawing.Point(72, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(258, 116);
@@ -257,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Principal.Properties.Resources.wood_2142241_1920;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1187, 788);
             this.ControlBox = false;

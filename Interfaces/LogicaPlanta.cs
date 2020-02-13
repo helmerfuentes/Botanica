@@ -13,11 +13,13 @@ namespace logica
     {
         string sql;
         private DatosPlantas datosPlantas;
+        private DatosTipoPlanta DatosTipoPlanta;
         private LogicaTipoPlantas LogicaTipo;
         public LogicaPlanta()
         {
             datosPlantas = new Dato.DatosPlantas();
             LogicaTipo = new LogicaTipoPlantas();
+            DatosTipoPlanta = new DatosTipoPlanta();
         }
 
         public bool addPlanta(Planta planta)
@@ -34,6 +36,14 @@ namespace logica
             return LogicaTipo.guardarPlantaTipo(planta.TipoPlanta, planta.Codigo);
 
 
+
+        }
+
+        public int NumeroPlantas()
+        {
+            sql = "select count(*) as cantidad from planta";
+            var numero= datosPlantas.NumeroPlantas(sql);
+            return numero;
 
         }
 
@@ -68,11 +78,44 @@ namespace logica
 
                 return null;
             }
-           
-
-
-            
         }
+
+        public Planta getPlantaId(string idPlanta)
+        {
+            try
+            {
+                Planta miPlanta;
+               sql = "select * from planta where id=" + idPlanta;
+
+                miPlanta= datosPlantas.PlantaId(sql);
+                if (miPlanta != null) {
+                    sql = "select imagen from imagen where plantaFk=";
+                    miPlanta.Imagenes = datosPlantas.obtenerImageneId(sql, miPlanta.Codigo);
+
+                    sql = "select tp.idTipo,tp.tipo,tp.descripcion from planta pl " +
+                        "inner join planta_tipo pt " +
+                        "on pl.id = pt.plantaFK " +
+                        "inner join tipo tp " +
+                        "on pt.tipoFK = tp.idTipo " +
+                        "where pl.id =" + miPlanta.Codigo;
+                    miPlanta.TipoPlanta = DatosTipoPlanta.gellAll(sql);
+                    return miPlanta;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+
+
+
+        }
+
+
+
 
 
     }

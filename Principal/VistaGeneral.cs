@@ -54,29 +54,7 @@ namespace Principal
            
 
 
-            //OpenFileDialog examinar = new OpenFileDialog();
-            //examinar.Multiselect = true;
-            //examinar.Filter = "image files |*.jpg; *.png;";
-            //DialogResult r = examinar.ShowDialog();
-            //if (r == DialogResult.OK)
-            //{
-            //    flowLayoutPanel1.Controls.Clear();
-            //    foreach (string item in examinar.FileNames)
-            //    {
-            //        PictureBox mpic = new PictureBox();
-            //        mpic.Image = Image.FromFile(item);
-            //        mpic.Width = 150;
-            //        mpic.Height = 150;
-            //        mpic.BorderStyle = BorderStyle.Fixed3D;
-            //        mpic.SizeMode = PictureBoxSizeMode.StretchImage;
-            //        flowLayoutPanel1.Controls.Add(mpic);
-
-                  
-            //    }
-               
-
-
-            //}
+            
         }
 
 

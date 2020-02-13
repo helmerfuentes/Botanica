@@ -58,6 +58,34 @@ namespace Dato
                 desConectar();
             }
         }
+
+        public int NumeroPlantas(string sql)
+        {
+            try
+            {
+                if (conectar())
+                {
+                    cmd = new MySqlCommand(sql, connection);
+
+                    
+
+                    MySqlDataReader myReader = cmd.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        return int.Parse(myReader["cantidad"].ToString());
+
+                    }
+                }
+                return -1;
+            }
+            catch (Exception)
+            {
+                return -1;
+
+                throw;
+            }
+        }
+
         public bool addImagenes(string sql,List<byte[]> imagenes)
         {
             try
@@ -93,6 +121,43 @@ namespace Dato
                 tr.Rollback();
                 Console.WriteLine(e.Message);
                 return false;
+            }
+            finally
+            {
+                desConectar();
+            }
+        }
+
+        public Planta PlantaId(string sql)
+        {
+            try
+            {
+                Planta p = new Planta();
+                if (conectar())
+                {
+                  
+
+                    cmd = new MySqlCommand(sql, connection);
+                    MySqlDataReader myReader = cmd.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        
+                        p.Codigo = int.Parse(myReader["id"].ToString());
+                        p.Nombre = myReader["nombre"].ToString();
+                        p.Descripcion = myReader["descripcion"].ToString();
+                        //p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
+                       
+                    }
+
+
+
+                }
+                return p;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
             }
             finally
             {
@@ -158,6 +223,8 @@ namespace Dato
                 desConectar();
             }
         }
+
+
 
         public List<Planta> getAllPlantaTipo(string sql)
         {

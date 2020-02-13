@@ -141,14 +141,25 @@ namespace Principal
         {
             informacion.Text = "";
             if (boton == "") boton = "b1";
-            //Los botones estan creados igual como se encuentra la clasificacion en la 
-            //base de datos, b1= id en la base de datos
-            //para la siguiente version hay que arreglar eso
-            //ejemplo el boton uno tiene como name b1=Astringentes
-            //en la base de datos el id=1 corresponden a astringente
-            VistaGeneral form = new VistaGeneral(boton.Substring(1));
-            form.Show();
-            this.Hide();
+
+            //b24 es el de juaga y aprende
+            if (boton == "b24")
+            {
+                FormularioJuego.MenuJuegos menu = new FormularioJuego.MenuJuegos();
+                
+                menu.Show();
+            }
+            else
+            {
+                //Los botones estan creados igual como se encuentra la clasificacion en la 
+                //base de datos, b1= id en la base de datos
+                //para la siguiente version hay que arreglar eso
+                //ejemplo el boton uno tiene como name b1=Astringentes
+                //en la base de datos el id=1 corresponden a astringente
+                VistaGeneral form = new VistaGeneral(boton.Substring(1));
+                form.Show();
+            }
+            this.Close();
         }
 
 
@@ -160,8 +171,18 @@ namespace Principal
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             e admin = new e();
-            this.Hide();
             admin.Show();
+            this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

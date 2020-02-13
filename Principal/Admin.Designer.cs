@@ -72,7 +72,7 @@
             this.txtnombrePlanta.LineIdleColor = System.Drawing.Color.Gray;
             this.txtnombrePlanta.LineMouseHoverColor = System.Drawing.Color.LightSeaGreen;
             this.txtnombrePlanta.LineThickness = 3;
-            this.txtnombrePlanta.Location = new System.Drawing.Point(186, 58);
+            this.txtnombrePlanta.Location = new System.Drawing.Point(212, 58);
             this.txtnombrePlanta.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombrePlanta.Name = "txtnombrePlanta";
             this.txtnombrePlanta.Size = new System.Drawing.Size(317, 33);
@@ -178,9 +178,10 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 37);
             this.button2.TabIndex = 101;
-            this.button2.Text = "Finalizar";
+            this.button2.Text = "Volver";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -348,6 +349,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Principal.Properties.Resources.fondo2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1242, 504);
             this.Controls.Add(this.jlbCantidadImagenes);
             this.Controls.Add(this.pictureBox5);

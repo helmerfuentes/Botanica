@@ -117,35 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="carta" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton23.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVGhD7ZnfK0NhGMf9Re7cuHPlihtKyQUulqImNUmS
+        C4mkcTEl05TfoYkiLRpZNPmxlsxq83OrbeQkF+Li0fc9x7G1Yzt5XTnPp75X2zl1Pp33ed7nPSWKohDn
+        92GBkmGBkmGBkmGBkmGBkikoMPWYodUTH3V4R6hxrpcqJ1qpdLju3wfPiedtWxmkheAWPaSThn6QHwVu
+        hw/EjRzro7R1GaDjuwtKKGmyAnhOPO9ONEg9my7hASKNPOUJhO2u9TFqWR6gzOuzdktr8/L2KkTalvop
+        lrzN8ZUjEPJqPA5aC/u1S5lsDuJnVD/TTZH7mLFAvHksrzBY2qiPeQJR87BsmeKM7s/T+N7St0B0WxRK
+        rnnmePt4p9rpTgrdRFSB6DAokox5po7WaMjnUQViv4OWzZgnkroWDVcIrJq0U/wpof3EmAHLuMzZoAqs
+        cNm4/v0CTC1CIBqIVaaMv0QXiB02NomMeVDyUPqEQJd/UextGPNg4MDgIQRiNKl2t4vCyJjD7h2mjXO/
+        KhBx7s7SeGBZ+5kpBE6ncMQHb7pATCOY8UKJqPY3xgjsVrBav84IdYEIRhOMKLwnNAbymhf6yH8Z1J3l
+        CEQCV6dih+0+9GqXMQCTGt68bHlInkAEyxlzHmyj21h1k42DVNQ7nMpj3DU62jcU+BXYRqvGpJL9zcAq
+        KR9rEs0C34WM/CAFBXKKhwVKhgVKhgVKhgVKRaFPxVLd11Sil3sAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="archivos-y-carpetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\archivos-y-carpetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuThinButton22.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVGhD7ZnfK0NhGMf9Re7cuHPlihtKyQUulqImNUmS
+        C4mkcTEl05TfoYkiLRpZNPmxlsxq83OrbeQkF+Li0fc9x7G1Yzt5XTnPp75X2zl1Pp33ed7nPSWKohDn
+        92GBkmGBkmGBkmGBkmGBkikoMPWYodUTH3V4R6hxrpcqJ1qpdLju3wfPiedtWxmkheAWPaSThn6QHwVu
+        hw/EjRzro7R1GaDjuwtKKGmyAnhOPO9ONEg9my7hASKNPOUJhO2u9TFqWR6gzOuzdktr8/L2KkTalvop
+        lrzN8ZUjEPJqPA5aC/u1S5lsDuJnVD/TTZH7mLFAvHksrzBY2qiPeQJR87BsmeKM7s/T+N7St0B0WxRK
+        rnnmePt4p9rpTgrdRFSB6DAokox5po7WaMjnUQViv4OWzZgnkroWDVcIrJq0U/wpof3EmAHLuMzZoAqs
+        cNm4/v0CTC1CIBqIVaaMv0QXiB02NomMeVDyUPqEQJd/UextGPNg4MDgIQRiNKl2t4vCyJjD7h2mjXO/
+        KhBx7s7SeGBZ+5kpBE6ncMQHb7pATCOY8UKJqPY3xgjsVrBav84IdYEIRhOMKLwnNAbymhf6yH8Z1J3l
+        CEQCV6dih+0+9GqXMQCTGt68bHlInkAEyxlzHmyj21h1k42DVNQ7nMpj3DU62jcU+BXYRqvGpJL9zcAq
+        KR9rEs0C34WM/CAFBXKKhwVKhgVKhgVKhgVKRaFPxVLd11Sil3sAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="quien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quien.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RIK" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RIK.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leaves-4743983_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leaves-4743983_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="wood-2142241_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wood-2142241_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="NoImageFound.jpg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NoImageFound.jpg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="quien2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quien2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFAAAAAgCAYAAACFM/9sAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVGhD7ZnfK0NhGMf9Re7cuHPlihtKyQUulqImNUmS
+        C4mkcTEl05TfoYkiLRpZNPmxlsxq83OrbeQkF+Li0fc9x7G1Yzt5XTnPp75X2zl1Pp33ed7nPSWKohDn
+        92GBkmGBkmGBkmGBkmGBkikoMPWYodUTH3V4R6hxrpcqJ1qpdLju3wfPiedtWxmkheAWPaSThn6QHwVu
+        hw/EjRzro7R1GaDjuwtKKGmyAnhOPO9ONEg9my7hASKNPOUJhO2u9TFqWR6gzOuzdktr8/L2KkTalvop
+        lrzN8ZUjEPJqPA5aC/u1S5lsDuJnVD/TTZH7mLFAvHksrzBY2qiPeQJR87BsmeKM7s/T+N7St0B0WxRK
+        rnnmePt4p9rpTgrdRFSB6DAokox5po7WaMjnUQViv4OWzZgnkroWDVcIrJq0U/wpof3EmAHLuMzZoAqs
+        cNm4/v0CTC1CIBqIVaaMv0QXiB02NomMeVDyUPqEQJd/UextGPNg4MDgIQRiNKl2t4vCyJjD7h2mjXO/
+        KhBx7s7SeGBZ+5kpBE6ncMQHb7pATCOY8UKJqPY3xgjsVrBav84IdYEIRhOMKLwnNAbymhf6yH8Z1J3l
+        CEQCV6dih+0+9GqXMQCTGt68bHlInkAEyxlzHmyj21h1k42DVNQ7nMpj3DU62jcU+BXYRqvGpJL9zcAq
+        KR9rEs0C34WM/CAFBXKKhwVKhgVKhgVKhgVKRaFPxVLd11Sil3sAAAAASUVORK5CYII=
+</value>
   </data>
 </root>

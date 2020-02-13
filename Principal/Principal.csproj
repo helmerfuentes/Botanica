@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -94,6 +95,42 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioJuego\1Vs1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\1Vs1.Designer.cs">
+      <DependentUpon>1Vs1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\JuegoPareja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\JuegoPareja.Designer.cs">
+      <DependentUpon>JuegoPareja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\MenuJuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\MenuJuegos.Designer.cs">
+      <DependentUpon>MenuJuegos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Pregunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Pregunta.Designer.cs">
+      <DependentUpon>Pregunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Repuesta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\QuiwnBotanico\Repuesta.Designer.cs">
+      <DependentUpon>Repuesta.cs</DependentUpon>
+    </Compile>
     <Compile Include="plantaItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +158,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\1Vs1.resx">
+      <DependentUpon>1Vs1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\JuegoPareja.resx">
+      <DependentUpon>JuegoPareja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\MenuJuegos.resx">
+      <DependentUpon>MenuJuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\QuiwnBotanico\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\QuiwnBotanico\Pregunta.resx">
+      <DependentUpon>Pregunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\QuiwnBotanico\Repuesta.resx">
+      <DependentUpon>Repuesta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="plantaItem.resx">
       <DependentUpon>plantaItem.cs</DependentUpon>
@@ -175,6 +230,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\clasificacionPrograma.pdf" />
     <None Include="Resources\NoImageFound.jpg.png" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +244,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\archivos-y-carpetas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wood-2142241_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaves-4743983_1920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quien2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

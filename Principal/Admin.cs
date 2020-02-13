@@ -47,7 +47,7 @@ namespace Principal
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
 
         }
 
@@ -174,6 +174,13 @@ namespace Principal
                     listBox2.Items.Remove(listBox2.SelectedItem);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
     }
 }

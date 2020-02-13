@@ -12,20 +12,32 @@ namespace logica
    public class LogicaTipoPlantas
     {
         
-        private ArrayList TipoPlantas;
+        private List<TipoPlanta> TipoPlantas;
         private DatosTipoPlanta DatosTipoPlanta;
         public LogicaTipoPlantas()
         {
             DatosTipoPlanta = new DatosTipoPlanta();
-            TipoPlantas = new ArrayList();
+            TipoPlantas = new List<TipoPlanta>();
         }
-        public ArrayList getAll()
+        public List<TipoPlanta> getAll()
         {
             string sql = "select *from tipo";
             return TipoPlantas = DatosTipoPlanta.gellAll(sql);
 
 
         }
+        
+        public List<TipoPlanta> getNoTipo(int codigoPlanta)
+        {
+            string sql = string.Format("select idTipo,tipo,descripcion from tipo where " +
+                     "idTipo  not in ( " +
+                    "select tipoFK from planta_tipo pt " +
+                    "inner join planta pl " +
+                    "on pl.id = pt.plantaFK " +
+                    "where pl.id = {0})",codigoPlanta);
+            return DatosTipoPlanta.gellAll(sql);
+        }
+
         public List<TipoPlanta> obtenerIdTipo(List<TipoPlanta> tipos)
         {
             getAll();

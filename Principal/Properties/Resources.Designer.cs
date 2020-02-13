@@ -73,6 +73,16 @@ namespace Principal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carta {
+            get {
+                object obj = ResourceManager.GetObject("carta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga {
             get {
                 object obj = ResourceManager.GetObject("descarga", resourceCulture);
@@ -93,6 +103,16 @@ namespace Principal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leaves_4743983_1920 {
+            get {
+                object obj = ResourceManager.GetObject("leaves-4743983_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NoImageFound_jpg {
             get {
                 object obj = ResourceManager.GetObject("NoImageFound.jpg", resourceCulture);
@@ -103,9 +123,39 @@ namespace Principal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quien {
+            get {
+                object obj = ResourceManager.GetObject("quien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quien2 {
+            get {
+                object obj = ResourceManager.GetObject("quien2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RIK {
             get {
                 object obj = ResourceManager.GetObject("RIK", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wood_2142241_1920 {
+            get {
+                object obj = ResourceManager.GetObject("wood-2142241_1920", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

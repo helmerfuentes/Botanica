@@ -35,13 +35,13 @@ namespace Dato
         }
 
 
-        public ArrayList gellAll(string sql)
+        public List<TipoPlanta> gellAll(string sql)
         {
             try
             {
                 if (conectar())
                 {
-                    ArrayList lista = new ArrayList();
+                    List<TipoPlanta> lista=  new List<TipoPlanta>();
 
                     cmd = new MySqlCommand(sql, connection);
                     MySqlDataReader myReader = cmd.ExecuteReader();
