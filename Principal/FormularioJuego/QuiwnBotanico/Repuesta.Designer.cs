@@ -35,12 +35,13 @@
             this.b2 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.b4 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // picImagen
             // 
-            this.picImagen.Location = new System.Drawing.Point(304, 12);
+            this.picImagen.Location = new System.Drawing.Point(273, 12);
             this.picImagen.Name = "picImagen";
             this.picImagen.Size = new System.Drawing.Size(369, 285);
             this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -65,7 +66,7 @@
             this.b1.IdleFillColor = System.Drawing.Color.White;
             this.b1.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.b1.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.b1.Location = new System.Drawing.Point(140, 374);
+            this.b1.Location = new System.Drawing.Point(137, 404);
             this.b1.Margin = new System.Windows.Forms.Padding(5);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(255, 41);
@@ -91,7 +92,7 @@
             this.b3.IdleFillColor = System.Drawing.Color.White;
             this.b3.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.b3.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.b3.Location = new System.Drawing.Point(535, 374);
+            this.b3.Location = new System.Drawing.Point(532, 404);
             this.b3.Margin = new System.Windows.Forms.Padding(5);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(248, 41);
@@ -117,7 +118,7 @@
             this.b2.IdleFillColor = System.Drawing.Color.White;
             this.b2.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.b2.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.b2.Location = new System.Drawing.Point(140, 451);
+            this.b2.Location = new System.Drawing.Point(137, 481);
             this.b2.Margin = new System.Windows.Forms.Padding(5);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(255, 41);
@@ -143,7 +144,7 @@
             this.b4.IdleFillColor = System.Drawing.Color.White;
             this.b4.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.b4.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.b4.Location = new System.Drawing.Point(535, 451);
+            this.b4.Location = new System.Drawing.Point(532, 481);
             this.b4.Margin = new System.Windows.Forms.Padding(5);
             this.b4.Name = "b4";
             this.b4.Size = new System.Drawing.Size(248, 41);
@@ -156,12 +157,24 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(271, 321);
+            this.label1.Location = new System.Drawing.Point(268, 351);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(392, 25);
             this.label1.TabIndex = 5;
             this.label1.Tag = "a";
             this.label1.Text = "¿ A que clasificacion pertenece la Planta?";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label2.Location = new System.Drawing.Point(268, 317);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(392, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Tag = "a";
+            this.label2.Text = "¿ A que clasificacion pertenece la Planta?";
             // 
             // Repuesta
             // 
@@ -171,6 +184,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b4);
             this.Controls.Add(this.b2);
@@ -178,6 +192,7 @@
             this.Controls.Add(this.b1);
             this.Controls.Add(this.picImagen);
             this.Name = "Repuesta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "7hg";
             this.Load += new System.EventHandler(this.Repuesta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
@@ -194,5 +209,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 b2;
         private Bunifu.Framework.UI.BunifuThinButton2 b4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

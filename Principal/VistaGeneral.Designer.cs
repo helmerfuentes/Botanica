@@ -135,9 +135,8 @@
             this.jlbnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.jlbnombre.Location = new System.Drawing.Point(123, 3);
             this.jlbnombre.Name = "jlbnombre";
-            this.jlbnombre.Size = new System.Drawing.Size(105, 18);
+            this.jlbnombre.Size = new System.Drawing.Size(0, 18);
             this.jlbnombre.TabIndex = 2;
-            this.jlbnombre.Text = " CHICORION";
             this.jlbnombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAnterior
@@ -177,7 +176,6 @@
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(358, 43);
             this.txtdescripcion.TabIndex = 3;
-            this.txtdescripcion.Text = "Daño en el Estomago, mala digestión";
             this.txtdescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox17
@@ -199,10 +197,11 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Principal.Properties.Resources.descarga;
             this.pictureBox1.Location = new System.Drawing.Point(72, 133);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(258, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 

@@ -184,5 +184,11 @@ namespace Principal
         {
 
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Informacion informacion = new Informacion();
+            informacion.ShowDialog();
+        }
     }
 }

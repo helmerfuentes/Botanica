@@ -42,6 +42,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
             MenuJuegos mj = new MenuJuegos();
+            sonido.Stop();
             mj.Show();
             this.Close();
         }

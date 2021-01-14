@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pregunta));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.jlbNombre = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnresponder = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.jlbNombre = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button10 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button2 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -46,6 +45,7 @@
             this.button4 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -59,6 +59,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(892, 81);
             this.panel1.TabIndex = 0;
+            // 
+            // jlbNombre
+            // 
+            this.jlbNombre.AutoSize = true;
+            this.jlbNombre.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jlbNombre.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.jlbNombre.Location = new System.Drawing.Point(293, 28);
+            this.jlbNombre.Name = "jlbNombre";
+            this.jlbNombre.Size = new System.Drawing.Size(290, 29);
+            this.jlbNombre.TabIndex = 0;
+            this.jlbNombre.Text = "Helmer Fuentes Alvarado";
             // 
             // panel3
             // 
@@ -100,32 +111,12 @@
             this.btnresponder.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnresponder.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnresponder.Location = new System.Drawing.Point(110, 436);
-            this.btnresponder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnresponder.Margin = new System.Windows.Forms.Padding(6);
             this.btnresponder.Name = "btnresponder";
             this.btnresponder.Size = new System.Drawing.Size(138, 49);
             this.btnresponder.TabIndex = 11;
             this.btnresponder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnresponder.Click += new System.EventHandler(this.btnresponder_Click);
-            // 
-            // jlbNombre
-            // 
-            this.jlbNombre.AutoSize = true;
-            this.jlbNombre.Font = new System.Drawing.Font("Georgia", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.jlbNombre.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.jlbNombre.Location = new System.Drawing.Point(293, 28);
-            this.jlbNombre.Name = "jlbNombre";
-            this.jlbNombre.Size = new System.Drawing.Size(290, 29);
-            this.jlbNombre.TabIndex = 0;
-            this.jlbNombre.Text = "Helmer Fuentes Alvarado";
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::Principal.Properties.Resources.quien2;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(0, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(549, 491);
-            this.panel4.TabIndex = 3;
             // 
             // button1
             // 
@@ -403,6 +394,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::Principal.Properties.Resources.quien2;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(0, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(549, 491);
+            this.panel4.TabIndex = 3;
+            // 
             // Pregunta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,6 +412,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "Pregunta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pregunta";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

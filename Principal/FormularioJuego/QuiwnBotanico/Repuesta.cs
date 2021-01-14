@@ -18,7 +18,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
         logica.LogicaTipoPlantas logicaTipoPlantas;
         private int respuesta = -1;
         private int preguntaNumero = -1;
-        private string nombre = "";
+        private string nombre = "",sRespuesta;
 
         public Repuesta(string nombre, int cual)
         {
@@ -40,10 +40,12 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             Random rando = new Random();
             int idPlanta = rando.Next(1, LogicaPlanta.NumeroPlantas());
           Planta planta=  LogicaPlanta.getPlantaId(idPlanta.ToString());
+            label2.Text = planta.Nombre + ".";
             picImagen.Image = byteArrayToImage(planta.Imagenes[rando.Next(0, planta.Imagenes.Count-1)]);
             List<TipoPlanta> noLista = logicaTipoPlantas.getNoTipo(idPlanta);
             //$$$$PREGUNTA ERRONEAS
             this.respuesta = rando.Next(4);
+            sRespuesta = planta.TipoPlanta[rando.Next(0, (planta.TipoPlanta.Count - 1))].Nombre;
             for (int i = 0; i < 4; i++)
             {
                 var numAletorio = rando.Next(0, noLista.Count - 1);
@@ -67,16 +69,16 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             switch (respuesta)
             {
                 case 0:
-                    b1.ButtonText = planta.TipoPlanta[rando.Next(0,(planta.TipoPlanta.Count-1))].Nombre;
+                    b1.ButtonText = sRespuesta;
                     break;
                 case 1:
-                    b2.ButtonText = planta.TipoPlanta[rando.Next(0, (planta.TipoPlanta.Count - 1))].Nombre;
+                    b2.ButtonText = sRespuesta;
                     break;
                 case 2:
-                    b3.ButtonText = planta.TipoPlanta[rando.Next(0, (planta.TipoPlanta.Count - 1))].Nombre;
+                    b3.ButtonText = sRespuesta;
                     break;
                 case 3:
-                    b4.ButtonText = planta.TipoPlanta[rando.Next(0, (planta.TipoPlanta.Count - 1))].Nombre;
+                    b4.ButtonText = sRespuesta;
                     break;
             }
 
@@ -96,13 +98,17 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             Bunifu.Framework.UI.BunifuThinButton2 cerrar = sender as Bunifu.Framework.UI.BunifuThinButton2;
             int boton = int.Parse(cerrar.Name[1] + "");
 
-            if (respuesta == (boton - 1)) { 
-            Pregunta pre = new Pregunta(this.nombre, this.preguntaNumero+1);
+            if (respuesta == (boton - 1))
+            {
+                Pregunta pre = new Pregunta(this.nombre, this.preguntaNumero + 1);
                 this.Close();
-        }
+            }
             else
-                MessageBox.Show("perdio");
-
+            {
+                MessageBox.Show("perdio, La respuesta es=>\n\t" + sRespuesta, label2.Text);
+                this.Close();
+                Inicio inicio = new Inicio();
+            }
         }
     }
 }

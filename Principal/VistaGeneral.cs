@@ -32,6 +32,7 @@ namespace Principal
             plantas = LogicaPlanta.getAllPlantaTipo(tipo);
             if (plantas != null)
             {
+                informacion.Text = plantas[0].TipoPlanta[0].Descripcion;
                 plantaItem[] plantaItems = new plantaItem[plantas.Count];
 
                 int i = 0;
