@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using logica;
 using System.IO;
+using System.Net;
 
 namespace Principal
 {
@@ -18,6 +19,7 @@ namespace Principal
         LogicaTipoPlantas LogicaTipoPlantas;
         LogicaPlanta LogicaPlanta;
         Planta Planta;
+        string url;
       
         public e()
         {
@@ -56,17 +58,63 @@ namespace Principal
 
         }
 
+        private int SubirArchivo()
+        {
+                    
+                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/"+Path.GetFileName(url));
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential("usuario", "helmer");
+                request.UsePassive = true;
+                request.UseBinary = true;
+                request.KeepAlive = true;
+                FileStream stream = File.OpenRead(url);
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                stream.Close();
+                Stream reqStream = request.GetRequestStream();
+                reqStream.Write(buffer, 0, buffer.Length);
+                reqStream.Flush();
+                reqStream.Close();
+                return 1;
+            
+           
+        }
+
+        public void prueba()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = "jpg (*.jpg)|*.jpg|png (*.png)|*.png|gif (*.gif)|*.gif";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                url = openFileDialog.FileName;
+                pcImagen.ImageLocation = url;
+                if (SubirArchivo()==1)
+                {
+                    MessageBox.Show("success");
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
+               
+            }
+
+        }
+
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+           
             OpenFileDialog examinar = new OpenFileDialog();
             examinar.Filter = "image files |*.jpg; *.png;";
             DialogResult r = examinar.ShowDialog();
+       
+
             if (r == DialogResult.OK)
             {
-                
                 pcImagen.Image= Image.FromFile(examinar.FileName);
-                byte[] imagenConvertida = File.ReadAllBytes(examinar.FileName);
-                Planta.Imagenes.Add(imagenConvertida);
+                Planta.Imagenes.Add(examinar.FileName);
                 jlbCantidadImagenes.Text = Planta.Imagenes.Count.ToString();
                 
 
@@ -76,10 +124,13 @@ namespace Principal
         private void btnguardar_Click(object sender, EventArgs e)
         {
 
+
+
             if (validar())
             {
                 for (int i = 0; i < listBox2.Items.Count; i++)
                     Planta.TipoPlanta.Add(new TipoPlanta(0, "", listBox2.Items[i].ToString()));
+
 
                 Planta.Nombre = txtnombrePlanta.Text;
                 Planta.Descripcion = txtDescripcionPlanta.Text;
@@ -181,6 +232,18 @@ namespace Principal
             Form1 form1 = new Form1();
             form1.Show();
             this.Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (SubirArchivo()==1)
+            {
+                MessageBox.Show("imagen subida");
+            }
+            else
+            {
+                MessageBox.Show("error");
+            }
         }
     }
 }

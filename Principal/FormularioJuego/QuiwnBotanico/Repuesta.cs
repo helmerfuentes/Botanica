@@ -41,7 +41,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             int idPlanta = rando.Next(1, LogicaPlanta.NumeroPlantas());
           Planta planta=  LogicaPlanta.getPlantaId(idPlanta.ToString());
             label2.Text = planta.Nombre + ".";
-            picImagen.Image = byteArrayToImage(planta.Imagenes[rando.Next(0, planta.Imagenes.Count-1)]);
+            //picImagen.Image = byteArrayToImage(planta.Imagenes[rando.Next(0, planta.Imagenes.Count-1)]);
             List<TipoPlanta> noLista = logicaTipoPlantas.getNoTipo(idPlanta);
             //$$$$PREGUNTA ERRONEAS
             this.respuesta = rando.Next(4);

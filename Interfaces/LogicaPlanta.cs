@@ -90,7 +90,7 @@ namespace logica
                 miPlanta= datosPlantas.PlantaId(sql);
                 if (miPlanta != null) {
                     sql = "select imagen from imagen where plantaFk=";
-                    miPlanta.Imagenes = datosPlantas.obtenerImageneId(sql, miPlanta.Codigo);
+                    //miPlanta.Imagenes = datosPlantas.obtenerImageneId(sql, miPlanta.Codigo);
 
                     sql = "select tp.idTipo,tp.tipo,tp.descripcion from planta pl " +
                         "inner join planta_tipo pt " +

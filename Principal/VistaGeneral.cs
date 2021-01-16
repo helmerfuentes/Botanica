@@ -17,7 +17,7 @@ namespace Principal
     {
         List<Planta> plantas;
         LogicaPlanta LogicaPlanta;
-        List<byte[]> ListaImagenesPlanta;
+        List<Image> ListaImagenesPlanta;
         int indiceImagenListaPlanta=0;
         int indicePlantaLista;
         public VistaGeneral(string idTipoPlanta)
@@ -42,7 +42,8 @@ namespace Principal
                     plantaItems[i] = new plantaItem();
                     plantaItems[i].indiceLista = i;
                     plantaItems[i].nombre = item.Nombre.ToUpper();
-                    Image image = byteArrayToImage(item.Imagenes[0]);
+                   Image image = byteArrayToImage(Encoding.ASCII.GetBytes(item.Imagenes[0]));
+                    
                     plantaItems[i].imagen = image;
                     
 
@@ -61,17 +62,17 @@ namespace Principal
 
         void itemClick(object sender, EventArgs e)
         {
-            plantaItem plantaItem = (plantaItem)sender;
+            /*plantaItem plantaItem = (plantaItem)sender;
             txtdescripcion.Text = this.plantas[plantaItem.indiceLista].Descripcion.ToUpper();
             pictureBoxZoom.Image = plantaItem.imagen;
             jlbnombre.Text = plantaItem.nombre.ToUpper();
-            ListaImagenesPlanta= this.plantas[plantaItem.indiceLista].Imagenes;
+           ListaImagenesPlanta= this.plantas[plantaItem.indiceLista].Imagenes;
             if (ListaImagenesPlanta.Count <= 1)
             {
                 btnAnterior.Enabled = false;
                 btnSiguiente.Enabled = false;
             }
-            indicePlantaLista = plantaItem.indiceLista;
+            indicePlantaLista = plantaItem.indiceLista;*/
 
 
         }
@@ -93,21 +94,23 @@ namespace Principal
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            indiceImagenListaPlanta++;
+           /* indiceImagenListaPlanta++;
             if (indiceImagenListaPlanta < ListaImagenesPlanta.Count)
                 this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
             else
                 indiceImagenListaPlanta--;
-        }
+        */
+            }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-
+/*
             indiceImagenListaPlanta--;
             if (indiceImagenListaPlanta>=0)
                 this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
             else
                 indiceImagenListaPlanta++;
+*/
 
         }
     }

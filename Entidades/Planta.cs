@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,13 @@ namespace Entidades
         private string nombre;
         private string descripcion;
         private List<TipoPlanta> tipoPlanta;
-        private List<byte[]> imagenes;
+        private List<string> imagenes;
+        private string ruta;
 
         public Planta()
         {
             tipoPlanta = new List<TipoPlanta>();
-            imagenes = new List<byte[]>();
+            imagenes = new List<string>();
 
         }
 
@@ -29,7 +31,7 @@ namespace Entidades
 
         }
 
-        public Planta(int codigo, string nombre, string descripcion, List<TipoPlanta> tipoPlanta, List<byte[]> imagenes)
+        public Planta(int codigo, string nombre, string descripcion, List<TipoPlanta> tipoPlanta, List<string> imagenes)
         {
             this.codigo = codigo;
             this.nombre = nombre;
@@ -42,6 +44,6 @@ namespace Entidades
         public string Nombre { get => nombre; set => nombre = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public List<TipoPlanta> TipoPlanta { get => tipoPlanta; set => tipoPlanta = value; }
-        public List<byte[]> Imagenes { get => imagenes; set => imagenes = value; }
+        public List<string> Imagenes { get => imagenes; set => imagenes = value; }
     }
 }
