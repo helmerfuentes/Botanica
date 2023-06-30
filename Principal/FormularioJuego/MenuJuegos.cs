@@ -20,7 +20,7 @@ namespace Principal.FormularioJuego
 
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            Form1 formPrincipal = new Form1();
+            FormPrincipal formPrincipal = new FormPrincipal();
             formPrincipal.Show();
             this.Close();
         }

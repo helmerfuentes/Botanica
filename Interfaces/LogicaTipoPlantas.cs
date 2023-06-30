@@ -22,7 +22,7 @@ namespace logica
         public List<TipoPlanta> getAll()
         {
             string sql = "select *from tipo";
-            return TipoPlantas = DatosTipoPlanta.gellAll(sql);
+            return TipoPlantas = DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
 
 
         }
@@ -35,7 +35,7 @@ namespace logica
                     "inner join planta pl " +
                     "on pl.id = pt.plantaFK " +
                     "where pl.id = {0})",codigoPlanta);
-            return DatosTipoPlanta.gellAll(sql);
+            return DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
         }
 
         public List<TipoPlanta> obtenerIdTipo(List<TipoPlanta> tipos)

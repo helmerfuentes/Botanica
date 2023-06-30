@@ -16,7 +16,7 @@ namespace Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 main = new Form1();
+            FormPrincipal main = new FormPrincipal();
             main.Show();
             //new FormularioJuego.JuegoPareja()
             Application.Run();

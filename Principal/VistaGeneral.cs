@@ -88,7 +88,7 @@ namespace Principal
         private void PictureBox17_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form1 form1 = new Form1();
+            FormPrincipal form1 = new FormPrincipal();
             form1.Show();
         }
 

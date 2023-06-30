@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Form1
+    partial class FormPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.b13 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.b14 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.b16 = new Bunifu.Framework.UI.BunifuThinButton2();

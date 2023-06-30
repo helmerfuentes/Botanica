@@ -4,10 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dato
 {
@@ -26,23 +23,17 @@ namespace Dato
         {
             try
             {
-                if (conectar())
+                Conectar();
+
+                string sql = "select max(id) as ultimoId from planta";
+                cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
                 {
 
-                    string sql = "select max(id) as ultimoId from planta";
-                    cmd = new MySqlCommand(sql, connection);
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
-
-                        codigoUltimoRegistro = int.Parse(myReader["ultimoId"].ToString());
-
-                    }
-
-
+                    codigoUltimoRegistro = int.Parse(myReader["ultimoId"].ToString());
 
                 }
-
             }
             catch (Exception e)
             {
@@ -52,7 +43,7 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
         }
 
@@ -60,18 +51,16 @@ namespace Dato
         {
             try
             {
-                if (conectar())
+                Conectar();
+                cmd = new MySqlCommand(sql, connection);
+
+
+
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
                 {
-                    cmd = new MySqlCommand(sql, connection);
+                    return int.Parse(myReader["cantidad"].ToString());
 
-
-
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        return int.Parse(myReader["cantidad"].ToString());
-
-                    }
                 }
                 return -1;
             }
@@ -87,26 +76,20 @@ namespace Dato
         {
             try
             {
-                if (conectar())
+                Conectar();
+                cmd = new MySqlCommand(sql, connection);
+                tr = connection.BeginTransaction();
+                cmd.Transaction = tr;
+
+                foreach (string item in imagenes)
                 {
-                    cmd = new MySqlCommand(sql, connection);
-                    tr = connection.BeginTransaction();
-                    cmd.Transaction = tr;
-
-                    foreach (string item in imagenes)
-                    {
-                        var NuevoNombre = obtenerNombreAletorio();
-                        NuevoNombre += Path.GetExtension(item);
-                        if (SubirImagenServidor(item,NuevoNombre) == 0) return false;
-                        cmd.Parameters.AddWithValue("@plantaFk", this.CodigoUltimoRegistro);
-                        cmd.Parameters.AddWithValue("@imagen", NuevoNombre);
-                        cmd.ExecuteNonQuery();
-                        cmd.Parameters.Clear();
-                    }
-
-
-
-
+                    var NuevoNombre = obtenerNombreAletorio();
+                    NuevoNombre += Path.GetExtension(item);
+                    if (SubirImagenServidor(item, NuevoNombre) == 0) return false;
+                    cmd.Parameters.AddWithValue("@plantaFk", this.CodigoUltimoRegistro);
+                    cmd.Parameters.AddWithValue("@imagen", NuevoNombre);
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
                 }
                 tr.Commit();
                 return true;
@@ -119,7 +102,7 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
         }
 
@@ -129,7 +112,7 @@ namespace Dato
         }
         private void otro()
         {
-           // string img = "http://192.168.1.4/botanic/img/0.jpg";
+            // string img = "http://192.168.1.4/botanic/img/0.jpg";
             //pictureBox1.Image = System.Drawing.Image.FromStream(getUrl(img));
         }
         private Stream getUrl(string URL)
@@ -154,7 +137,7 @@ namespace Dato
             return nombreNuevo;
         }
 
-        private int SubirImagenServidor(string url,string nombreFile)
+        private int SubirImagenServidor(string url, string nombreFile)
         {
 
             FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/" + nombreFile);
@@ -181,25 +164,19 @@ namespace Dato
             try
             {
                 Planta p = new Planta();
-                if (conectar())
+                Conectar();
+                cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
                 {
 
-
-                    cmd = new MySqlCommand(sql, connection);
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
-
-                        p.Codigo = int.Parse(myReader["id"].ToString());
-                        p.Nombre = myReader["nombre"].ToString();
-                        p.Descripcion = myReader["descripcion"].ToString();
-                        //p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
-
-                    }
-
-
+                    p.Codigo = int.Parse(myReader["id"].ToString());
+                    p.Nombre = myReader["nombre"].ToString();
+                    p.Descripcion = myReader["descripcion"].ToString();
+                    //p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
 
                 }
+
                 return p;
             }
             catch (Exception e)
@@ -209,11 +186,11 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
         }
 
-        
+
 
         public List<string> obtenerImageneId(string sql, int codigo)
         {
@@ -221,27 +198,23 @@ namespace Dato
 
             try
             {
-                if (conectar())
+                Conectar();
+                string ruta = "http://192.168.1.4/botanic/img/";
+                imagenes = new List<string>();
+                //concatenar el codigo de la planta para el where de la consulta
+                sql += codigo;
+                cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
                 {
-                    string ruta = "http://192.168.1.4/botanic/img/";
-                    imagenes = new List<string>();
-                    //concatenar el codigo de la planta para el where de la consulta
-                    sql += codigo;
-                    cmd = new MySqlCommand(sql, connection);
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
 
-                        string NombreImagen = (string)(myReader["imagen"]);
-                        ruta += NombreImagen;
+                    string NombreImagen = (string)(myReader["imagen"]);
+                    ruta += NombreImagen;
 
-                        imagenes.Add(getUrl(ruta).ToString());
-
-                    }
-
-
+                    imagenes.Add(getUrl(ruta).ToString());
 
                 }
+
                 return imagenes;
             }
             catch (Exception e)
@@ -251,7 +224,7 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
         }
 
@@ -263,25 +236,21 @@ namespace Dato
             Planta p;
             try
             {
-                if (conectar())
+                Conectar();
+                plantas = new List<Planta>();
+
+                cmd = new MySqlCommand(sql, connection);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                while (myReader.Read())
                 {
-                    plantas = new List<Planta>();
-
-                    cmd = new MySqlCommand(sql, connection);
-                    MySqlDataReader myReader = cmd.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        p = new Planta();
-                        p.Codigo = int.Parse(myReader["plantaId"].ToString());
-                        p.Nombre = myReader["nombre"].ToString();
-                        p.Descripcion = myReader["descripcion"].ToString();
-                        p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
-                        plantas.Add(p);
-                    }
-
-
-
+                    p = new Planta();
+                    p.Codigo = int.Parse(myReader["plantaId"].ToString());
+                    p.Nombre = myReader["nombre"].ToString();
+                    p.Descripcion = myReader["descripcion"].ToString();
+                    p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
+                    plantas.Add(p);
                 }
+
                 return plantas;
             }
             catch (Exception e)
@@ -291,32 +260,29 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
         }
 
-        public Planta agregarPlanta(string sql, Planta planta)
+        public Planta AgregarPlanta(string sql, Planta planta)
         {
             try
             {
-
-                if (conectar())
+                Conectar();
+                tr = connection.BeginTransaction();
+                cmd = new MySqlCommand(sql, connection)
                 {
+                    Transaction = tr
+                };
 
-                    tr = connection.BeginTransaction();
-                    cmd = new MySqlCommand(sql, connection);
-                    cmd.Transaction = tr;
-                    cmd.Parameters.AddWithValue("@nombre", planta.Nombre);
-                    cmd.Parameters.AddWithValue("@descripcion", planta.Descripcion);
-                    cmd.ExecuteNonQuery();
-                    CodigoUltimoRegistro++;
-                    planta.Codigo = codigoUltimoRegistro;
-                    tr.Commit();
-                    return planta;
-
-
-                }
-                return null;
+                cmd.Parameters.AddWithValue("@nombre", planta.Nombre);
+                cmd.Parameters.AddWithValue("@descripcion", planta.Descripcion);
+                cmd.ExecuteNonQuery();
+                //GET EL ID DEL REGISTRO AGREGADO
+                CodigoUltimoRegistro++;
+                planta.Codigo = codigoUltimoRegistro;
+                tr.Commit();
+                return planta;
             }
             catch (Exception e)
             {
@@ -325,7 +291,7 @@ namespace Dato
             }
             finally
             {
-                desConectar();
+                DesConectar();
             }
 
         }

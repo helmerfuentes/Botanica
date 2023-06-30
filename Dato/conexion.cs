@@ -1,66 +1,144 @@
 ﻿
-
-//using MySql.Data.MySqlClient;
+using Entidades.DTO;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Configuration;
+using System.Xml;
 
 namespace Datos
 {
-   public class Conexion
+    public class Conexion
     {
         public MySqlConnection connection;
-        private const string servidor = "127.0.0.1";
-        private const string puerto = "3306";
-        private const string usuario = "root";
-        private const string password = "";
-        private const string database = "botanica";
+        private string servidor = "192.168.0.104";
+        private string puerto = "3306";
+        private string usuario = "root";
+        private string password = "root";
+        private string database = "botanica";
 
         public MySqlCommand cmd;
-
-
         //Cadena de conexion
-        public string connectionString =
-            String.Format("server={0};port={1};user id={2}; password={3}; " +
-            "database={4}; pooling=false;SslMode=none;" +
-            "Allow Zero Datetime=False;Convert Zero Datetime=True",
-            servidor, puerto, usuario, password, database);
+        private string _CONNECTION_STRING = ("server={0};port={1};user id={2}; password={3}; " +
+            "database={4}; pooling=false;SslMode=none; AllowPublicKeyRetrieval=true;persistsecurityinfo=True;" +
+            "Allow Zero Datetime=False;Convert Zero Datetime=True");
 
-        public bool conectar()
+        public Conexion()
+        {
+            ObtenerValoresAppConfig();
+
+        }
+        public bool EstaConfiguradoParaAccederBD()
+        {
+            Conectar();
+            return true;
+            var conexionExitosa = Convert.ToBoolean(ConfigurationManager.AppSettings["conexionExitosa"]);
+            return conexionExitosa;
+        }
+
+        public void SetValoresConexion(DatosConexionBDModels datosConexionBD)
+        {
+            servidor = datosConexionBD.Servidor;
+            puerto = datosConexionBD.Puerto;
+            usuario = datosConexionBD.Usuario;
+            password = datosConexionBD.Password;
+            Conectar();
+
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+            foreach (XmlElement element in xmlDocument.DocumentElement)
+            {
+                if (element.Name.Equals("appSettings"))
+                {
+                    foreach (XmlNode node in element.ChildNodes)
+                    {
+                        if (node.Attributes[0].Value == "servidor")
+                        {
+                            node.Attributes[1].Value = datosConexionBD.Servidor;
+                        }
+                        else if (node.Attributes[0].Value == "usuario")
+                        {
+                            node.Attributes[1].Value = datosConexionBD.Usuario;
+                        }
+                        else if (node.Attributes[0].Value == "puerto")
+                        {
+                            node.Attributes[1].Value = datosConexionBD.Puerto;
+                        }
+                        else if (node.Attributes[0].Value == "password")
+                        {
+                            node.Attributes[1].Value = datosConexionBD.Password;
+                        }
+                        else if (node.Attributes[0].Value == "conexionExitosa")
+                        {
+                            node.Attributes[1].Value = "true";
+                        }
+
+                    }
+                }
+            }
+            xmlDocument.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        private void ObtenerValoresAppConfig()
+        {
+            servidor = ConfigurationManager.AppSettings["servidor"];
+            puerto = ConfigurationManager.AppSettings["puerto"];
+            usuario = ConfigurationManager.AppSettings["usuario"];
+            password = ConfigurationManager.AppSettings["password"];
+        }
+
+        public void Conectar()
         {
             try
             {
-
-                connection = new MySqlConnection(connectionString);
+                var connectionFormat = string.Format(_CONNECTION_STRING, servidor, puerto, usuario, password, database);
+                connection = new MySqlConnection(connectionFormat);
                 connection.Open();
                 Console.WriteLine("conexion exitosa");
-                return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error Conectar");
-                return false;
-
+                SetAppConfigKeyConexionExitosa();
+                throw new Exception("Error al conectar al servidor BD", ex); ;
             }
         }
 
-        public bool desConectar()
+        private void SetAppConfigKeyConexionExitosa()
+        {
+            XmlDocument xmlDocument = new XmlDocument();
+            xmlDocument.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+            foreach (XmlElement element in xmlDocument.DocumentElement)
+            {
+                if (element.Name.Equals("appSettings"))
+                {
+                    foreach (XmlNode node in element.ChildNodes)
+                    {
+
+                        if (node.Attributes[0].Value == "conexionExitosa")
+                        {
+                            node.Attributes[1].Value = "false";
+                        }
+
+                    }
+                }
+            }
+            xmlDocument.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
+
+        public void DesConectar()
         {
             try
             {
-                connection = new MySqlConnection(connectionString);
+                var connectionFormat = string.Format(_CONNECTION_STRING, servidor, puerto, usuario, password, database);
+                connection = new MySqlConnection(connectionFormat);
                 connection.Close();
-                return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
-
+                throw new Exception("Error al desconectar BD", ex);
             }
         }
-       
+
     }
 }

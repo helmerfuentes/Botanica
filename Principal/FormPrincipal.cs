@@ -1,29 +1,39 @@
-﻿
-
+﻿using Interfaces;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class Form1 : Form
+    public partial class FormPrincipal : Form
     {
-
-        String boton="b1";
-        public Form1()
+        private readonly LogicaConexion logicaConexion = new LogicaConexion();
+        string boton = "b1";
+        public FormPrincipal()
         {
             InitializeComponent();
-            
+            ValidarCredencialesConnectarBD();
+
         }
 
-       
+        private void ValidarCredencialesConnectarBD()
+        {
+            try
+            {
+                var estaConfigurado = logicaConexion.EstaConfiguradoParaAccederBD();
+                if (!estaConfigurado)
+                {
+                    FormConexionServerBD conexionServerBD = new FormConexionServerBD();
+                    conexionServerBD.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -33,7 +43,7 @@ namespace Principal
         private void btnastringes_MouseClick(object sender, MouseEventArgs e)
         {
 
-          
+
             MessageBox.Show("");
 
         }
@@ -48,13 +58,13 @@ namespace Principal
             Bunifu.Framework.UI.BunifuThinButton2 cerrar = sender as Bunifu.Framework.UI.BunifuThinButton2;
             boton = cerrar.Name;
 
-            informacionmostrar(cerrar.Name);
-            
+            Informacionmostrar(cerrar.Name);
 
-            
+
+
         }
 
-        public void informacionmostrar(String boton)
+        public void Informacionmostrar(String boton)
         {
             informacion.Text = "";
             if (boton == "") boton = "b1";
@@ -62,82 +72,82 @@ namespace Principal
             {
                 case "b1":
                     informacion.Text = "Astringentes. Son aquellas que contraen los tejidos, combatiendo inflamaciones de la boca, la garganta, los intestinos y los órganos genitales.";
-                 break;
+                    break;
                 case "b2":
                     informacion.Text = "Antisépticas. Son plantas desinfectantes.";
-                 break;
+                    break;
                 case "b3":
                     informacion.Text = "Apetentes. Abren el apetito.";
-                 break;
+                    break;
                 case "b4":
                     informacion.Text = "Béquicas. Sirven para combatir la tos.";
-                 break;
+                    break;
                 case "b5":
                     informacion.Text = "Calmantes o sedativas. Ayudan a calmar el sistema nervioso.";
-                 break;
+                    break;
                 case "b6":
                     informacion.Text = "Carminativas. Son aquellas que combaten la flatulencia estomacal e intestinal.";
-                 break;
+                    break;
                 case "b7":
                     informacion.Text = "Depurativas. Sirven para purificar y limpiar la sangre.";
-                 break;
+                    break;
                 case "b8":
                     informacion.Text = "Desobtruyentes. Sirven para las obstrucciones estomacales y hepáticas.";
-                 break;
+                    break;
                 case "b9":
                     informacion.Text = "Diuréticas. Sirven para aumentar la orina";
-                 break;
+                    break;
                 case "b10":
                     informacion.Text = "Emenágogas. Útil para provocar o restablecer la menstruación.";
-                 break;
+                    break;
                 case "b11":
                     informacion.Text = "Eméticas. Ayudan a provocar vómitos en caso de ser necesario, como en las intoxicaciones.";
-                 break;
+                    break;
                 case "b12":
                     informacion.Text = "Emolientes. Ablandan el tejido endurecido de los abscesos, ulceras e inflamaciones.";
-                 break;
+                    break;
                 case "b13":
                     informacion.Text = "Estimulantes. Sirven para aumentar la energía del cuerpo.";
-                 break;
+                    break;
                 case "b14":
                     informacion.Text = "Estomacales. Alivian el malestar estomacal.";
-                 break;
+                    break;
                 case "b15":
                     informacion.Text = "Expectorantes o pectorales. Sirven para despejar las vías respiratorias y ayudan a expulsar el catarro.";
-                 break;
+                    break;
                 case "b16":
                     informacion.Text = "Febrífugas. Son buenas para combatir la fiebre.";
-                 break;
+                    break;
                 case "b17":
                     informacion.Text = "Hemostáticas. Son aquellas que combaten las hemorragias.";
-                 break;
+                    break;
                 case "b18":
                     informacion.Text = "Purgantes o laxantes. Sirven para provocar o acelerar las evacuaciones.";
-                 break;
+                    break;
                 case "b19":
                     informacion.Text = "Resolutivas. Ayudan a acabar las inflamaciones.";
-                 break;
+                    break;
                 case "b20":
                     informacion.Text = "Sudoríficas. Causan la sudoración o transpiración.";
-                 break;
+                    break;
                 case "b21":
                     informacion.Text = "Tónicas. Son buenas para fortificar el cuerpo, combatir la anemia y la debilidad pulmonar.";
-                 break;
+                    break;
                 case "b22":
                     informacion.Text = "Vermífugas o antihelmínticas. Sirven para exterminar las lombrices.";
-                 break;
+                    break;
                 case "b23":
                     informacion.Text = "Vulnerarias. Son aquellas plantas importantes que ayudan a curar heridas.";
-                 break;
+                    break;
                 case "b24":
                     informacion.Text = "Estimulo los Visto en los Modulos Anteriores";
-                 break;
+                    break;
             }
 
         }
 
 
-        public void abrirformulario(String boton)
+        public void Abrirformulario(String boton)
         {
             informacion.Text = "";
             if (boton == "") boton = "b1";
@@ -146,7 +156,7 @@ namespace Principal
             if (boton == "b24")
             {
                 FormularioJuego.MenuJuegos menu = new FormularioJuego.MenuJuegos();
-                
+
                 menu.Show();
             }
             else
@@ -163,14 +173,14 @@ namespace Principal
         }
 
 
-            private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            abrirformulario(boton);
+            Abrirformulario(boton);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            e admin = new e();
+            FormAdmin admin = new FormAdmin();
             admin.Show();
             this.Close();
         }

@@ -1,27 +1,21 @@
 ﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using logica;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Net;
+using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class e : Form
+    public partial class FormAdmin : Form
     {
         LogicaTipoPlantas LogicaTipoPlantas;
         LogicaPlanta LogicaPlanta;
         Planta Planta;
         string url;
-      
-        public e()
+
+        public FormAdmin()
         {
             InitializeComponent();
 
@@ -39,7 +33,7 @@ namespace Principal
             {
                 listBox1.Items.Add(item.Nombre);
             }
-            
+
         }
 
         private void chbvuelnerarias_OnChange(object sender, EventArgs e)
@@ -60,24 +54,22 @@ namespace Principal
 
         private int SubirArchivo()
         {
-                    
-                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/"+Path.GetFileName(url));
-                request.Method = WebRequestMethods.Ftp.UploadFile;
-                request.Credentials = new NetworkCredential("usuario", "helmer");
-                request.UsePassive = true;
-                request.UseBinary = true;
-                request.KeepAlive = true;
-                FileStream stream = File.OpenRead(url);
-                byte[] buffer = new byte[stream.Length];
-                stream.Read(buffer, 0, buffer.Length);
-                stream.Close();
-                Stream reqStream = request.GetRequestStream();
-                reqStream.Write(buffer, 0, buffer.Length);
-                reqStream.Flush();
-                reqStream.Close();
-                return 1;
-            
-           
+
+            FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/" + Path.GetFileName(url));
+            request.Method = WebRequestMethods.Ftp.UploadFile;
+            request.Credentials = new NetworkCredential("usuario", "helmer");
+            request.UsePassive = true;
+            request.UseBinary = true;
+            request.KeepAlive = true;
+            FileStream stream = File.OpenRead(url);
+            byte[] buffer = new byte[stream.Length];
+            stream.Read(buffer, 0, buffer.Length);
+            stream.Close();
+            Stream reqStream = request.GetRequestStream();
+            reqStream.Write(buffer, 0, buffer.Length);
+            reqStream.Flush();
+            reqStream.Close();
+            return 1;
         }
 
         public void prueba()
@@ -90,7 +82,7 @@ namespace Principal
             {
                 url = openFileDialog.FileName;
                 pcImagen.ImageLocation = url;
-                if (SubirArchivo()==1)
+                if (SubirArchivo() == 1)
                 {
                     MessageBox.Show("success");
                 }
@@ -98,25 +90,25 @@ namespace Principal
                 {
                     MessageBox.Show("error");
                 }
-               
+
             }
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-           
+
             OpenFileDialog examinar = new OpenFileDialog();
             examinar.Filter = "image files |*.jpg; *.png;";
             DialogResult r = examinar.ShowDialog();
-       
+
 
             if (r == DialogResult.OK)
             {
-                pcImagen.Image= Image.FromFile(examinar.FileName);
+                pcImagen.Image = Image.FromFile(examinar.FileName);
                 Planta.Imagenes.Add(examinar.FileName);
                 jlbCantidadImagenes.Text = Planta.Imagenes.Count.ToString();
-                
+
 
             }
         }
@@ -126,7 +118,7 @@ namespace Principal
 
 
 
-            if (validar())
+            if (Validar())
             {
                 for (int i = 0; i < listBox2.Items.Count; i++)
                     Planta.TipoPlanta.Add(new TipoPlanta(0, "", listBox2.Items[i].ToString()));
@@ -134,10 +126,10 @@ namespace Principal
 
                 Planta.Nombre = txtnombrePlanta.Text;
                 Planta.Descripcion = txtDescripcionPlanta.Text;
-                if (LogicaPlanta.addPlanta(Planta))
+                if (LogicaPlanta.AgregarPlanta(Planta))
                 {
                     MessageBox.Show("Registro Exitoso");
-                    limpiar();
+                    Limpiar();
                     Planta = new Planta();
                 }
                 else
@@ -145,15 +137,15 @@ namespace Principal
                     MessageBox.Show("Error al agregar");
                 }
 
-                
-     
-            
+
+
+
 
 
             }
         }
 
-        private void limpiar()
+        private void Limpiar()
         {
             this.txtDescripcionPlanta.Text = "";
             this.txtnombrePlanta.Text = "";
@@ -162,21 +154,24 @@ namespace Principal
 
         }
 
-        private bool validar()
+        private bool Validar()
         {
             if (txtnombrePlanta.Text == "" || txtnombrePlanta.Text == "Digite Nombre Planta")
             {
                 MessageBox.Show("Digite Nombre Planta");
                 return false;
-            }else if(txtDescripcionPlanta.Text=="" || txtDescripcionPlanta.Text== "Descripción")
+            }
+            else if (txtDescripcionPlanta.Text == "" || txtDescripcionPlanta.Text == "Descripción")
             {
                 MessageBox.Show("Digite Descripción");
                 return false;
-            }else if (Planta.Imagenes.Count == 0)
+            }
+            else if (Planta.Imagenes.Count == 0)
             {
                 MessageBox.Show("Debe cargar al menos una Imagen");
                 return false;
-            }else if (listBox2.Items.Count==0)
+            }
+            else if (listBox2.Items.Count == 0)
             {
                 MessageBox.Show("Selecionar al menos una clasificación");
                 return false;
@@ -196,10 +191,10 @@ namespace Principal
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedIndex!=-1)
+            if (listBox2.SelectedIndex != -1)
             {
-            listBox1.Items.Add(listBox2.SelectedItem);
-            listBox2.Items.Remove(listBox2.SelectedItem);
+                listBox1.Items.Add(listBox2.SelectedItem);
+                listBox2.Items.Remove(listBox2.SelectedItem);
             }
         }
 
@@ -207,7 +202,7 @@ namespace Principal
         {
             if (listBox1.SelectedIndex != -1)
             {
-                while (listBox1.SelectedItems.Count!=0)
+                while (listBox1.SelectedItems.Count != 0)
                 {
                     listBox2.Items.Add(listBox1.SelectedItem);
                     listBox1.Items.Remove(listBox1.SelectedItem);
@@ -229,14 +224,14 @@ namespace Principal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            FormPrincipal form1 = new FormPrincipal();
             form1.Show();
             this.Close();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (SubirArchivo()==1)
+            if (SubirArchivo() == 1)
             {
                 MessageBox.Show("imagen subida");
             }

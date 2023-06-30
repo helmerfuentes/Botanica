@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class e
+    partial class FormAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(e));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.txtnombrePlanta = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDescripcionPlanta = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuCustomLabel25 = new Bunifu.Framework.UI.BunifuCustomLabel();

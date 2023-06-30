@@ -1,11 +1,7 @@
-﻿using Datos;
+﻿using Dato;
+using Entidades;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dato;
-using Entidades;
 
 namespace logica
 {
@@ -22,10 +18,10 @@ namespace logica
             DatosTipoPlanta = new DatosTipoPlanta();
         }
 
-        public bool addPlanta(Planta planta)
+        public bool AgregarPlanta(Planta planta)
         {
             sql = "INSERT INTO PLANTA(nombre,descripcion) VALUES (@nombre,@descripcion)";
-            if (datosPlantas.agregarPlanta(sql, planta) == null) return false;
+            if (datosPlantas.AgregarPlanta(sql, planta) == null) return false;
 
             sql = "INSERT INTO IMAGEN(imagen,plantaFk) VALUES (@imagen,@plantaFk)";
             if (!datosPlantas.addImagenes(sql, planta.Imagenes)) return false;
@@ -42,7 +38,7 @@ namespace logica
         public int NumeroPlantas()
         {
             sql = "select count(*) as cantidad from planta";
-            var numero= datosPlantas.NumeroPlantas(sql);
+            var numero = datosPlantas.NumeroPlantas(sql);
             return numero;
 
         }
@@ -85,10 +81,11 @@ namespace logica
             try
             {
                 Planta miPlanta;
-               sql = "select * from planta where id=" + idPlanta;
+                sql = "select * from planta where id=" + idPlanta;
 
-                miPlanta= datosPlantas.PlantaId(sql);
-                if (miPlanta != null) {
+                miPlanta = datosPlantas.PlantaId(sql);
+                if (miPlanta != null)
+                {
                     sql = "select imagen from imagen where plantaFk=";
                     //miPlanta.Imagenes = datosPlantas.obtenerImageneId(sql, miPlanta.Codigo);
 
@@ -98,7 +95,7 @@ namespace logica
                         "inner join tipo tp " +
                         "on pt.tipoFK = tp.idTipo " +
                         "where pl.id =" + miPlanta.Codigo;
-                    miPlanta.TipoPlanta = DatosTipoPlanta.gellAll(sql);
+                    miPlanta.TipoPlanta = DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
                     return miPlanta;
                 }
                 return null;
