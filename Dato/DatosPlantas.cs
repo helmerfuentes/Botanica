@@ -10,41 +10,10 @@ namespace Dato
 {
     public class DatosPlantas : Conexion
     {
-        private int codigoUltimoRegistro;
         MySqlTransaction tr = null;
 
         public DatosPlantas()
         {
-            keyUltimoRegistro();
-        }
-
-        //obtener el codigo de la ultima planta registrarla
-        public void keyUltimoRegistro()
-        {
-            try
-            {
-                Conectar();
-
-                string sql = "select max(id) as ultimoId from planta";
-                cmd = new MySqlCommand(sql, connection);
-                MySqlDataReader myReader = cmd.ExecuteReader();
-                while (myReader.Read())
-                {
-
-                    codigoUltimoRegistro = int.Parse(myReader["ultimoId"].ToString());
-
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                codigoUltimoRegistro = 0;
-
-            }
-            finally
-            {
-                DesConectar();
-            }
         }
 
         public int NumeroPlantas(string sql)
@@ -72,8 +41,9 @@ namespace Dato
             }
         }
 
-        public bool addImagenes(string sql, List<string> imagenes)
+        public bool AgregarImagenes(IEnumerable<string> paths, int plantaFk)
         {
+            var sql = "INSERT INTO IMAGEN(ruta,plantaFk) VALUES (@path,@plantaFk)";
             try
             {
                 Conectar();
@@ -81,13 +51,10 @@ namespace Dato
                 tr = connection.BeginTransaction();
                 cmd.Transaction = tr;
 
-                foreach (string item in imagenes)
+                foreach (string path in paths)
                 {
-                    var NuevoNombre = obtenerNombreAletorio();
-                    NuevoNombre += Path.GetExtension(item);
-                    if (SubirImagenServidor(item, NuevoNombre) == 0) return false;
-                    cmd.Parameters.AddWithValue("@plantaFk", this.CodigoUltimoRegistro);
-                    cmd.Parameters.AddWithValue("@imagen", NuevoNombre);
+                    cmd.Parameters.AddWithValue("@plantaFk", plantaFk);
+                    cmd.Parameters.AddWithValue("@path", path);
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
                 }
@@ -110,53 +77,53 @@ namespace Dato
         {
             return 1;
         }
-        private void otro()
+
+        private byte[] ObtenerImagenServidor(string url)
         {
-            // string img = "http://192.168.1.4/botanic/img/0.jpg";
-            //pictureBox1.Image = System.Drawing.Image.FromStream(getUrl(img));
-        }
-        private Stream getUrl(string URL)
-        {
-            HttpWebRequest request = ((HttpWebRequest)WebRequest.Create(URL));
-            HttpWebResponse response = ((HttpWebResponse)request.GetResponse());
-            try
+            using (WebClient ftpClient = new WebClient())
             {
-                return response.GetResponseStream();
-            }
-            catch
-            {
-                return response.GetResponseStream();
+                ftpClient.Credentials = new NetworkCredential("bbvik", "root");
+                byte[] imageBytes = ftpClient.DownloadData(url);
+
+                return imageBytes;
             }
         }
 
-        string obtenerNombreAletorio()
+        private string GenerarNombreAletorio(string rutaOrigen)
         {
-            int longitud = 7;
+            var extension = Path.GetExtension(rutaOrigen);
+            int longitud = 15;
             Guid miGuid = Guid.NewGuid();
             string nombreNuevo = miGuid.ToString().Replace("-", string.Empty).Substring(0, longitud);
-            return nombreNuevo;
+            return $"{nombreNuevo}{extension}";
         }
 
-        private int SubirImagenServidor(string url, string nombreFile)
+        private string SubirImagenServidor(string url)
         {
+            try
+            {
+                var nombreNuevoArchivo = GenerarNombreAletorio(url);
+                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.0.108/" + nombreNuevoArchivo);
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential("bbvik", "root");
+                request.UsePassive = true;
+                request.UseBinary = true;
+                request.KeepAlive = true;
+                FileStream stream = File.OpenRead(url);
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                stream.Close();
+                Stream reqStream = request.GetRequestStream();
+                reqStream.Write(buffer, 0, buffer.Length);
+                reqStream.Flush();
+                reqStream.Close();
+                return nombreNuevoArchivo;
+            }
+            catch (Exception ex)
+            {
 
-            FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/" + nombreFile);
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.Credentials = new NetworkCredential("usuario", "helmer");
-            request.UsePassive = true;
-            request.UseBinary = true;
-            request.KeepAlive = true;
-            FileStream stream = File.OpenRead(url);
-            byte[] buffer = new byte[stream.Length];
-            stream.Read(buffer, 0, buffer.Length);
-            stream.Close();
-            Stream reqStream = request.GetRequestStream();
-            reqStream.Write(buffer, 0, buffer.Length);
-            reqStream.Flush();
-            reqStream.Close();
-            return 1;
-
-
+                throw new ApplicationException("Error al subir imagen servidor ", ex);
+            }
         }
 
         public Planta PlantaId(string sql)
@@ -190,17 +157,14 @@ namespace Dato
             }
         }
 
-
-
-        public List<string> obtenerImageneId(string sql, int codigo)
+        public List<byte[]> ObtenerImagenId(string sql, int codigo)
         {
-            List<string> imagenes = null;
-
             try
             {
+
                 Conectar();
-                string ruta = "http://192.168.1.4/botanic/img/";
-                imagenes = new List<string>();
+                string servidor = "ftp://192.168.0.108/";
+                List<byte[]> imagenes = new List<byte[]>();
                 //concatenar el codigo de la planta para el where de la consulta
                 sql += codigo;
                 cmd = new MySqlCommand(sql, connection);
@@ -208,10 +172,10 @@ namespace Dato
                 while (myReader.Read())
                 {
 
-                    string NombreImagen = (string)(myReader["imagen"]);
-                    ruta += NombreImagen;
-
-                    imagenes.Add(getUrl(ruta).ToString());
+                    string NombreImagen = (string)(myReader["ruta"]);
+                    servidor += NombreImagen;
+                    var imagen = ObtenerImagenServidor(servidor);
+                    imagenes.Add(imagen);
 
                 }
 
@@ -227,8 +191,6 @@ namespace Dato
                 DesConectar();
             }
         }
-
-
 
         public List<Planta> getAllPlantaTipo(string sql)
         {
@@ -264,12 +226,12 @@ namespace Dato
             }
         }
 
-        public Planta AgregarPlanta(string sql, Planta planta)
+        public Planta AgregarPlanta(Planta planta)
         {
+            var sql = "INSERT INTO PLANTA(nombre,descripcion) VALUES (@nombre,@descripcion);SELECT LAST_INSERT_ID();";
             try
             {
                 Conectar();
-                tr = connection.BeginTransaction();
                 cmd = new MySqlCommand(sql, connection)
                 {
                     Transaction = tr
@@ -277,17 +239,13 @@ namespace Dato
 
                 cmd.Parameters.AddWithValue("@nombre", planta.Nombre);
                 cmd.Parameters.AddWithValue("@descripcion", planta.Descripcion);
-                cmd.ExecuteNonQuery();
-                //GET EL ID DEL REGISTRO AGREGADO
-                CodigoUltimoRegistro++;
-                planta.Codigo = codigoUltimoRegistro;
-                tr.Commit();
+                var identificador = cmd.ExecuteScalar();
+                planta.Codigo = Convert.ToInt32(identificador);
                 return planta;
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                return null;
+                throw new Exception("Error al guardar datos de planta", e);
             }
             finally
             {
@@ -295,9 +253,18 @@ namespace Dato
             }
 
         }
-        public int CodigoUltimoRegistro { get => codigoUltimoRegistro; set => codigoUltimoRegistro = value; }
 
+        public IEnumerable<string> SubirImagenesServidor(IEnumerable<string> imagenes)
+        {
+            List<string> paths = new List<string>();
+            foreach (var item in imagenes)
+            {
+                var ruta = SubirImagenServidor(item);
+                paths.Add(ruta);
+            }
+            return paths;
 
+        }
     }
 
 

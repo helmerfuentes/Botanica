@@ -1,9 +1,9 @@
 ﻿using Entidades;
 using logica;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
-using System.Net;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Principal
@@ -13,6 +13,7 @@ namespace Principal
         LogicaTipoPlantas LogicaTipoPlantas;
         LogicaPlanta LogicaPlanta;
         Planta Planta;
+        IEnumerable<TipoPlanta> tiposPlantas;
         string url;
 
         public FormAdmin()
@@ -22,14 +23,15 @@ namespace Principal
             LogicaTipoPlantas = new LogicaTipoPlantas();
             LogicaPlanta = new LogicaPlanta();
             Planta = new Planta();
-            cargarClasificacionPlantas();
+            CargarClasificacionPlantas();
         }
 
-        private void cargarClasificacionPlantas()
+        private void CargarClasificacionPlantas()
         {
             listBox1.Items.Clear();
             listBox2.Items.Clear();
-            foreach (TipoPlanta item in LogicaTipoPlantas.getAll())
+            tiposPlantas = LogicaTipoPlantas.getAll();
+            foreach (TipoPlanta item in tiposPlantas)
             {
                 listBox1.Items.Add(item.Nombre);
             }
@@ -52,48 +54,6 @@ namespace Principal
 
         }
 
-        private int SubirArchivo()
-        {
-
-            FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://127.0.0.1/" + Path.GetFileName(url));
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.Credentials = new NetworkCredential("usuario", "helmer");
-            request.UsePassive = true;
-            request.UseBinary = true;
-            request.KeepAlive = true;
-            FileStream stream = File.OpenRead(url);
-            byte[] buffer = new byte[stream.Length];
-            stream.Read(buffer, 0, buffer.Length);
-            stream.Close();
-            Stream reqStream = request.GetRequestStream();
-            reqStream.Write(buffer, 0, buffer.Length);
-            reqStream.Flush();
-            reqStream.Close();
-            return 1;
-        }
-
-        public void prueba()
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            openFileDialog.Filter = "jpg (*.jpg)|*.jpg|png (*.png)|*.png|gif (*.gif)|*.gif";
-
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                url = openFileDialog.FileName;
-                pcImagen.ImageLocation = url;
-                if (SubirArchivo() == 1)
-                {
-                    MessageBox.Show("success");
-                }
-                else
-                {
-                    MessageBox.Show("error");
-                }
-
-            }
-
-        }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -115,33 +75,27 @@ namespace Principal
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-
-
-
             if (Validar())
             {
                 for (int i = 0; i < listBox2.Items.Count; i++)
-                    Planta.TipoPlanta.Add(new TipoPlanta(0, "", listBox2.Items[i].ToString()));
-
+                {
+                    var nombreTipo = listBox2.Items[i].ToString();
+                    var tipo = tiposPlantas.FirstOrDefault(x => x.Nombre == nombreTipo);
+                    Planta.TipoPlanta.Add(tipo);
+                }
 
                 Planta.Nombre = txtnombrePlanta.Text;
                 Planta.Descripcion = txtDescripcionPlanta.Text;
-                if (LogicaPlanta.AgregarPlanta(Planta))
+                try
                 {
+                    LogicaPlanta.AgregarPlanta(Planta);
                     MessageBox.Show("Registro Exitoso");
-                    Limpiar();
-                    Planta = new Planta();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Error al agregar");
+
+                    MessageBox.Show(ex.InnerException.Message, "Error al agregar");
                 }
-
-
-
-
-
-
             }
         }
 
@@ -150,7 +104,7 @@ namespace Principal
             this.txtDescripcionPlanta.Text = "";
             this.txtnombrePlanta.Text = "";
             this.jlbCantidadImagenes.Text = "0";
-            cargarClasificacionPlantas();
+            CargarClasificacionPlantas();
 
         }
 
@@ -227,18 +181,6 @@ namespace Principal
             FormPrincipal form1 = new FormPrincipal();
             form1.Show();
             this.Close();
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            if (SubirArchivo() == 1)
-            {
-                MessageBox.Show("imagen subida");
-            }
-            else
-            {
-                MessageBox.Show("error");
-            }
         }
     }
 }

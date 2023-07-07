@@ -11,28 +11,6 @@ namespace Principal
         public FormPrincipal()
         {
             InitializeComponent();
-            ValidarCredencialesConnectarBD();
-
-        }
-
-        private void ValidarCredencialesConnectarBD()
-        {
-            try
-            {
-                var estaConfigurado = logicaConexion.EstaConfiguradoParaAccederBD();
-                if (!estaConfigurado)
-                {
-                    FormConexionServerBD conexionServerBD = new FormConexionServerBD();
-                    conexionServerBD.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -147,7 +125,7 @@ namespace Principal
         }
 
 
-        public void Abrirformulario(String boton)
+        public void Abrirformulario(string boton)
         {
             informacion.Text = "";
             if (boton == "") boton = "b1";

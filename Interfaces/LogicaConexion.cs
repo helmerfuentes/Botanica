@@ -11,9 +11,6 @@ namespace Interfaces
             conexion = new Conexion();
         }
 
-        public bool EstaConfiguradoParaAccederBD()
-            => conexion.EstaConfiguradoParaAccederBD();
-
         public void SetValoresConexion(DatosConexionBDModels datosConexion)
             => conexion.SetValoresConexion(datosConexion);
 

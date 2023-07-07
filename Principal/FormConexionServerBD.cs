@@ -39,18 +39,20 @@ namespace Principal
 
                     logicaConexion.SetValoresConexion(datosConexion);
                     this.Close();
+                    FormPrincipal main = new FormPrincipal();
+                    main.Show();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.InnerException.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

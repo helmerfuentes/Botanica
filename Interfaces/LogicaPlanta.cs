@@ -20,18 +20,11 @@ namespace logica
 
         public bool AgregarPlanta(Planta planta)
         {
-            sql = "INSERT INTO PLANTA(nombre,descripcion) VALUES (@nombre,@descripcion)";
-            if (datosPlantas.AgregarPlanta(sql, planta) == null) return false;
-
-            sql = "INSERT INTO IMAGEN(imagen,plantaFk) VALUES (@imagen,@plantaFk)";
-            if (!datosPlantas.addImagenes(sql, planta.Imagenes)) return false;
-
-            //obtengo los id que vienen en la lista que seleciono el usuario
-            planta.TipoPlanta = LogicaTipo.obtenerIdTipo(planta.TipoPlanta);
+            var rutasImagenes = datosPlantas.SubirImagenesServidor(planta.Imagenes);
+            var plantaResponse = datosPlantas.AgregarPlanta(planta);
+            datosPlantas.AgregarImagenes(rutasImagenes, plantaResponse.Codigo);
 
             return LogicaTipo.guardarPlantaTipo(planta.TipoPlanta, planta.Codigo);
-
-
 
         }
 
@@ -43,7 +36,7 @@ namespace logica
 
         }
 
-        public List<Planta> getAllPlantaTipo(string idTipoPlanta)
+        public List<Planta> ObtenerPlantasTipo(string idTipoPlanta)
         {
             try
             {
@@ -55,15 +48,16 @@ namespace logica
                         "inner join planta pl " +
                         "on pt.plantaFk = pl.id " +
                         "where idTipo = " + idTipoPlanta;
+
                 plantas = datosPlantas.getAllPlantaTipo(sql);
 
                 if (plantas != null)
                 {
-                    sql = "select imagen from imagen where plantaFk=";
+                    sql = "select ruta from imagen where plantaFk=";
                     foreach (Planta item in plantas)
                     {
 
-                        item.Imagenes = datosPlantas.obtenerImageneId(sql, item.Codigo);
+                        item.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(sql, item.Codigo);
 
                     }
                 }

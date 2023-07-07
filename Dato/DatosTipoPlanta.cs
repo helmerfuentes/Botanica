@@ -41,18 +41,19 @@ namespace Dato
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
-                    TipoPlanta p = new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcion"].ToString(), myReader["tipo"].ToString());
+                    var idTipo = int.Parse(myReader["idTipo"].ToString());
+                    var descripcion = myReader["descripcion"].ToString();
+                    var tipo = myReader["tipo"].ToString();
+                    TipoPlanta p = new TipoPlanta(idTipo, descripcion, tipo);
                     lista.Add(p);
 
                 }
 
                 return lista;
-
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                return null;
+                throw e;
             }
             finally
             {
@@ -60,8 +61,9 @@ namespace Dato
             }
         }
 
-        public bool guardarTablaIntercepto(string sql, List<TipoPlanta> tipos, int fkPlanta)
+        public bool GuardarTablaIntercepto(List<TipoPlanta> tipos, int fkPlanta)
         {
+            string sql = "INSERT INTO PLANTA_TIPO(tipoFk,plantaFk) VALUES (@IdTipo,@IdPlanta)";
             try
             {
 
@@ -84,8 +86,7 @@ namespace Dato
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
-                return false;
+                throw e;
             }
             finally
             {

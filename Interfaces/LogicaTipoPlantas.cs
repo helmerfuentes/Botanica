@@ -1,17 +1,12 @@
 ﻿using Dato;
 using Entidades;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace logica
 {
-   public class LogicaTipoPlantas
+    public class LogicaTipoPlantas
     {
-        
+
         private List<TipoPlanta> TipoPlantas;
         private DatosTipoPlanta DatosTipoPlanta;
         public LogicaTipoPlantas()
@@ -26,7 +21,7 @@ namespace logica
 
 
         }
-        
+
         public List<TipoPlanta> getNoTipo(int codigoPlanta)
         {
             string sql = string.Format("select idTipo,tipo,descripcion from tipo where " +
@@ -34,7 +29,7 @@ namespace logica
                     "select tipoFK from planta_tipo pt " +
                     "inner join planta pl " +
                     "on pl.id = pt.plantaFK " +
-                    "where pl.id = {0})",codigoPlanta);
+                    "where pl.id = {0})", codigoPlanta);
             return DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
         }
 
@@ -53,13 +48,8 @@ namespace logica
 
         }
         // guado en la tabla intercepto Planta_Tipo
-       public bool guardarPlantaTipo(List<TipoPlanta> tipos,int FkPlanta)
-        {
-            string sql = "INSERT INTO PLANTA_TIPO(tipoFk,plantaFk) VALUES (@IdTipo,@IdPlanta)";
-            if(!DatosTipoPlanta.guardarTablaIntercepto(sql,tipos,FkPlanta)) return false;
-            return true;
-
-        }
+        public bool guardarPlantaTipo(List<TipoPlanta> tipos, int FkPlanta)
+            => DatosTipoPlanta.GuardarTablaIntercepto(tipos, FkPlanta);
 
     }
 }

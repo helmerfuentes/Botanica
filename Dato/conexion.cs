@@ -10,13 +10,14 @@ namespace Datos
     public class Conexion
     {
         public MySqlConnection connection;
-        private string servidor = "192.168.0.104";
+        private string servidor = "192.168.0.108";
         private string puerto = "3306";
         private string usuario = "root";
         private string password = "root";
         private string database = "botanica";
 
         public MySqlCommand cmd;
+
         //Cadena de conexion
         private string _CONNECTION_STRING = ("server={0};port={1};user id={2}; password={3}; " +
             "database={4}; pooling=false;SslMode=none; AllowPublicKeyRetrieval=true;persistsecurityinfo=True;" +
@@ -26,13 +27,6 @@ namespace Datos
         {
             ObtenerValoresAppConfig();
 
-        }
-        public bool EstaConfiguradoParaAccederBD()
-        {
-            Conectar();
-            return true;
-            var conexionExitosa = Convert.ToBoolean(ConfigurationManager.AppSettings["conexionExitosa"]);
-            return conexionExitosa;
         }
 
         public void SetValoresConexion(DatosConexionBDModels datosConexionBD)
@@ -94,16 +88,15 @@ namespace Datos
                 var connectionFormat = string.Format(_CONNECTION_STRING, servidor, puerto, usuario, password, database);
                 connection = new MySqlConnection(connectionFormat);
                 connection.Open();
-                Console.WriteLine("conexion exitosa");
             }
             catch (Exception ex)
             {
-                SetAppConfigKeyConexionExitosa();
+                SetAppConfigKeyConexionExitosa(false);
                 throw new Exception("Error al conectar al servidor BD", ex); ;
             }
         }
 
-        private void SetAppConfigKeyConexionExitosa()
+        private void SetAppConfigKeyConexionExitosa(bool exitoso)
         {
             XmlDocument xmlDocument = new XmlDocument();
             xmlDocument.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
@@ -116,7 +109,7 @@ namespace Datos
 
                         if (node.Attributes[0].Value == "conexionExitosa")
                         {
-                            node.Attributes[1].Value = "false";
+                            node.Attributes[1].Value = exitoso.ToString();
                         }
 
                     }

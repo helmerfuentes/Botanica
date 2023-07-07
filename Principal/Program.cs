@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Interfaces;
+using System;
 using System.Windows.Forms;
 
 namespace Principal
@@ -16,8 +14,20 @@ namespace Principal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormPrincipal main = new FormPrincipal();
-            main.Show();
+            LogicaConexion logicaConexion = new LogicaConexion();
+            try
+            {
+                logicaConexion.ConexionDisponible();
+                FormPrincipal main = new FormPrincipal();
+                main.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.InnerException.Message, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FormConexionServerBD conexionServerBD = new FormConexionServerBD();
+                conexionServerBD.Show();
+            }
+
             //new FormularioJuego.JuegoPareja()
             Application.Run();
         }

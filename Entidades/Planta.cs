@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Entidades
 {
@@ -14,7 +9,7 @@ namespace Entidades
         private string descripcion;
         private List<TipoPlanta> tipoPlanta;
         private List<string> imagenes;
-        private string ruta;
+        private List<byte[]> ImagenesConvertidas;
 
         public Planta()
         {
@@ -45,5 +40,6 @@ namespace Entidades
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public List<TipoPlanta> TipoPlanta { get => tipoPlanta; set => tipoPlanta = value; }
         public List<string> Imagenes { get => imagenes; set => imagenes = value; }
+        public List<byte[]> ImagenesConvertidas1 { get => ImagenesConvertidas; set => ImagenesConvertidas = value; }
     }
 }

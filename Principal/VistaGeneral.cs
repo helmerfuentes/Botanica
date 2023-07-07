@@ -2,13 +2,8 @@
 using logica;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Principal
@@ -18,45 +13,45 @@ namespace Principal
         List<Planta> plantas;
         LogicaPlanta LogicaPlanta;
         List<Image> ListaImagenesPlanta;
-        int indiceImagenListaPlanta=0;
+        int indiceImagenListaPlanta = 0;
         int indicePlantaLista;
         public VistaGeneral(string idTipoPlanta)
         {
             InitializeComponent();
             LogicaPlanta = new LogicaPlanta();
-           cargarImagenes(idTipoPlanta);
+            CargarImagenes(idTipoPlanta);
         }
 
-        private void cargarImagenes(string tipo)
+        private void CargarImagenes(string tipo)
         {
-            plantas = LogicaPlanta.getAllPlantaTipo(tipo);
-            if (plantas != null)
+            plantas = LogicaPlanta.ObtenerPlantasTipo(tipo);
+            if (plantas != null && plantas.Count > 0)
             {
                 informacion.Text = plantas[0].TipoPlanta[0].Descripcion;
                 plantaItem[] plantaItems = new plantaItem[plantas.Count];
 
                 int i = 0;
-            foreach (Planta item in plantas)
-            {
-                   
+                foreach (Planta item in plantas)
+                {
+
                     plantaItems[i] = new plantaItem();
                     plantaItems[i].indiceLista = i;
                     plantaItems[i].nombre = item.Nombre.ToUpper();
-                   Image image = byteArrayToImage(Encoding.ASCII.GetBytes(item.Imagenes[0]));
-                    
+                    Image image = byteArrayToImage(item.ImagenesConvertidas1[0]);
+
                     plantaItems[i].imagen = image;
-                    
 
-                    plantaItems[i].Click+= new System.EventHandler(this.itemClick);
+
+                    plantaItems[i].Click += new System.EventHandler(this.itemClick);
                     flowLayoutPanel1.Controls.Add(plantaItems[i]);
-                        i++;
-            }
+                    i++;
+                }
 
             }
-           
 
 
-            
+
+
         }
 
 
@@ -94,23 +89,28 @@ namespace Principal
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-           /* indiceImagenListaPlanta++;
-            if (indiceImagenListaPlanta < ListaImagenesPlanta.Count)
-                this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
-            else
-                indiceImagenListaPlanta--;
-        */
-            }
+            /* indiceImagenListaPlanta++;
+             if (indiceImagenListaPlanta < ListaImagenesPlanta.Count)
+                 this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
+             else
+                 indiceImagenListaPlanta--;
+         */
+        }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-/*
-            indiceImagenListaPlanta--;
-            if (indiceImagenListaPlanta>=0)
-                this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
-            else
-                indiceImagenListaPlanta++;
-*/
+            /*
+                        indiceImagenListaPlanta--;
+                        if (indiceImagenListaPlanta>=0)
+                            this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
+                        else
+                            indiceImagenListaPlanta++;
+            */
+
+        }
+
+        private void pictureBoxZoom_Click(object sender, EventArgs e)
+        {
 
         }
     }
