@@ -94,11 +94,10 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, -15);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(742, 643);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(742, 670);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -122,7 +121,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Principal.Properties.Resources.descarga;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(258, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +160,7 @@
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox17.Location = new System.Drawing.Point(5, 25);
+            this.pictureBox17.Location = new System.Drawing.Point(5, 4);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(38, 35);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,9 +187,9 @@
             this.pbzImagenZoom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbzImagenZoom.BackColor = System.Drawing.Color.White;
             this.pbzImagenZoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbzImagenZoom.Location = new System.Drawing.Point(2, 191);
+            this.pbzImagenZoom.Location = new System.Drawing.Point(2, 180);
             this.pbzImagenZoom.Name = "pbzImagenZoom";
-            this.pbzImagenZoom.Size = new System.Drawing.Size(358, 291);
+            this.pbzImagenZoom.Size = new System.Drawing.Size(358, 302);
             this.pbzImagenZoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbzImagenZoom.TabIndex = 0;
             this.pbzImagenZoom.TabStop = false;
