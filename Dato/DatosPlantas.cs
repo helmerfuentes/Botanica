@@ -11,6 +11,7 @@ namespace Dato
     public class DatosPlantas : Conexion
     {
         MySqlTransaction tr = null;
+        private string SERVIDOR_FORMATO = "ftp://{0}/";
 
         public DatosPlantas()
         {
@@ -73,17 +74,13 @@ namespace Dato
             }
         }
 
-        private int leerImagenServidor(string ruta)
+        private byte[] ObtenerImagenServidor(string nombreImagen)
         {
-            return 1;
-        }
-
-        private byte[] ObtenerImagenServidor(string url)
-        {
+            string ruta = $"{string.Format(SERVIDOR_FORMATO, servidor)}{nombreImagen}";
             using (WebClient ftpClient = new WebClient())
             {
-                ftpClient.Credentials = new NetworkCredential("bbvik", "root");
-                byte[] imageBytes = ftpClient.DownloadData(url);
+                ftpClient.Credentials = new NetworkCredential(usuario, password);
+                byte[] imageBytes = ftpClient.DownloadData(ruta);
 
                 return imageBytes;
             }
@@ -103,9 +100,10 @@ namespace Dato
             try
             {
                 var nombreNuevoArchivo = GenerarNombreAletorio(url);
-                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create("ftp://192.168.0.108/" + nombreNuevoArchivo);
+                var urlServidor = $"{string.Format(SERVIDOR_FORMATO, servidor)}{nombreNuevoArchivo}";
+                FtpWebRequest request = (FtpWebRequest)FtpWebRequest.Create(urlServidor);
                 request.Method = WebRequestMethods.Ftp.UploadFile;
-                request.Credentials = new NetworkCredential("bbvik", "root");
+                request.Credentials = new NetworkCredential(usuario, password);
                 request.UsePassive = true;
                 request.UseBinary = true;
                 request.KeepAlive = true;
@@ -140,8 +138,6 @@ namespace Dato
                     p.Codigo = int.Parse(myReader["id"].ToString());
                     p.Nombre = myReader["nombre"].ToString();
                     p.Descripcion = myReader["descripcion"].ToString();
-                    //p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
-
                 }
 
                 return p;
@@ -161,9 +157,7 @@ namespace Dato
         {
             try
             {
-
                 Conectar();
-                string servidor = "ftp://192.168.0.108/";
                 List<byte[]> imagenes = new List<byte[]>();
                 //concatenar el codigo de la planta para el where de la consulta
                 sql += codigo;
@@ -171,14 +165,10 @@ namespace Dato
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
-
                     string NombreImagen = (string)(myReader["ruta"]);
-                    servidor += NombreImagen;
-                    var imagen = ObtenerImagenServidor(servidor);
+                    var imagen = ObtenerImagenServidor(NombreImagen);
                     imagenes.Add(imagen);
-
                 }
-
                 return imagenes;
             }
             catch (Exception e)

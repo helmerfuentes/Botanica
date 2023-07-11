@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Principal
@@ -33,41 +34,33 @@ namespace Principal
                 int i = 0;
                 foreach (Planta item in plantas)
                 {
-
                     plantaItems[i] = new plantaItem();
                     plantaItems[i].indiceLista = i;
                     plantaItems[i].nombre = item.Nombre.ToUpper();
                     Image image = byteArrayToImage(item.ImagenesConvertidas1[0]);
-
                     plantaItems[i].imagen = image;
-
-
-                    plantaItems[i].Click += new System.EventHandler(this.itemClick);
+                    plantaItems[i].PictureBoxClicked += PlantaItem_Click;
                     flowLayoutPanel1.Controls.Add(plantaItems[i]);
                     i++;
                 }
-
             }
-
-
-
-
         }
 
-
-        void itemClick(object sender, EventArgs e)
+        void PlantaItem_Click(object sender, EventArgs e)
         {
-            /*plantaItem plantaItem = (plantaItem)sender;
+            Console.WriteLine("");
+            plantaItem plantaItem = (plantaItem)sender;
             txtdescripcion.Text = this.plantas[plantaItem.indiceLista].Descripcion.ToUpper();
-            pictureBoxZoom.Image = plantaItem.imagen;
+            pbzImagenZoom.Image = plantaItem.imagen;
             jlbnombre.Text = plantaItem.nombre.ToUpper();
-           ListaImagenesPlanta= this.plantas[plantaItem.indiceLista].Imagenes;
+            var images = this.plantas[plantaItem.indiceLista].ImagenesConvertidas1.Select(x => byteArrayToImage(x));
+            ListaImagenesPlanta = images.ToList();
             if (ListaImagenesPlanta.Count <= 1)
             {
                 btnAnterior.Enabled = false;
                 btnSiguiente.Enabled = false;
             }
-            indicePlantaLista = plantaItem.indiceLista;*/
+            indicePlantaLista = plantaItem.indiceLista;
 
 
         }
@@ -89,24 +82,22 @@ namespace Principal
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            /* indiceImagenListaPlanta++;
-             if (indiceImagenListaPlanta < ListaImagenesPlanta.Count)
-                 this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
-             else
-                 indiceImagenListaPlanta--;
-         */
+            indiceImagenListaPlanta++;
+            if (indiceImagenListaPlanta < ListaImagenesPlanta.Count)
+                this.pbzImagenZoom.Image = ListaImagenesPlanta[indiceImagenListaPlanta];
+            else
+                indiceImagenListaPlanta--;
+
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            /*
-                        indiceImagenListaPlanta--;
-                        if (indiceImagenListaPlanta>=0)
-                            this.pictureBoxZoom.Image = byteArrayToImage(ListaImagenesPlanta[indiceImagenListaPlanta]);
-                        else
-                            indiceImagenListaPlanta++;
-            */
 
+            indiceImagenListaPlanta--;
+            if (indiceImagenListaPlanta >= 0)
+                this.pbzImagenZoom.Image = ListaImagenesPlanta[indiceImagenListaPlanta];
+            else
+                indiceImagenListaPlanta++;
         }
 
         private void pictureBoxZoom_Click(object sender, EventArgs e)

@@ -10,10 +10,10 @@ namespace Datos
     public class Conexion
     {
         public MySqlConnection connection;
-        private string servidor = "192.168.0.108";
+        public string servidor = "192.168.0.108";
+        public string password = "root";
+        public string usuario = "root";
         private string puerto = "3306";
-        private string usuario = "root";
-        private string password = "root";
         private string database = "botanica";
 
         public MySqlCommand cmd;

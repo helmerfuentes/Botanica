@@ -1,24 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Principal
 {
     public partial class plantaItem : UserControl
     {
+        public event EventHandler PictureBoxClicked;
+
         public plantaItem()
         {
             InitializeComponent();
         }
 
+
+        protected virtual void OnPictureBoxClicked(EventArgs e)
+        {
+            PictureBoxClicked?.Invoke(this, e);
+        }
+
         private string _nombre;
-      
+
         private Image _imagen;
 
         private int _indiceLista;
@@ -45,8 +48,9 @@ namespace Principal
             set { _nombre = value; txtnombre.Text = value; }
         }
 
-        private void pctImagen_Click(object sender, EventArgs e)
+        private void pctImagen_Click(object sender, System.EventArgs e)
         {
+            OnPictureBoxClicked(EventArgs.Empty);
         }
     }
 }

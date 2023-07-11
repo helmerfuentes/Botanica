@@ -33,13 +33,13 @@
             this.transparentControl3 = new TransControl_src.TransparentControl();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSiguiente = new System.Windows.Forms.PictureBox();
             this.jlbnombre = new System.Windows.Forms.Label();
-            this.btnAnterior = new System.Windows.Forms.PictureBox();
-            this.pictureBoxZoom = new System.Windows.Forms.PictureBox();
-            this.txtdescripcion = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAnterior = new System.Windows.Forms.PictureBox();
+            this.pbzImagenZoom = new System.Windows.Forms.PictureBox();
+            this.txtdescripcion = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -47,11 +47,11 @@
             this.transparentControl1.SuspendLayout();
             this.transparentControl3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbzImagenZoom)).BeginInit();
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -92,8 +92,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.BottomUp;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(742, 643);
@@ -101,20 +103,31 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSiguiente);
             this.panel1.Controls.Add(this.jlbnombre);
             this.panel1.Controls.Add(this.pictureBox17);
             this.panel1.Controls.Add(this.btnAnterior);
-            this.panel1.Controls.Add(this.pictureBoxZoom);
+            this.panel1.Controls.Add(this.pbzImagenZoom);
             this.panel1.Controls.Add(this.txtdescripcion);
-            this.panel1.Location = new System.Drawing.Point(25, 189);
+            this.panel1.Location = new System.Drawing.Point(25, 186);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(366, 539);
+            this.panel1.Size = new System.Drawing.Size(366, 542);
             this.panel1.TabIndex = 35;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Principal.Properties.Resources.descarga;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // btnSiguiente
             // 
@@ -122,7 +135,7 @@
             this.btnSiguiente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSiguiente.Image = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.Image")));
-            this.btnSiguiente.Location = new System.Drawing.Point(172, 495);
+            this.btnSiguiente.Location = new System.Drawing.Point(171, 492);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(42, 30);
             this.btnSiguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,46 +154,6 @@
             this.jlbnombre.TabIndex = 2;
             this.jlbnombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnAnterior
-            // 
-            this.btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAnterior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
-            this.btnAnterior.Location = new System.Drawing.Point(124, 495);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(42, 30);
-            this.btnAnterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAnterior.TabIndex = 34;
-            this.btnAnterior.TabStop = false;
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
-            // 
-            // pictureBoxZoom
-            // 
-            this.pictureBoxZoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxZoom.BackColor = System.Drawing.Color.White;
-            this.pictureBoxZoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxZoom.Location = new System.Drawing.Point(3, 206);
-            this.pictureBoxZoom.Name = "pictureBoxZoom";
-            this.pictureBoxZoom.Size = new System.Drawing.Size(358, 258);
-            this.pictureBoxZoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxZoom.TabIndex = 0;
-            this.pictureBoxZoom.TabStop = false;
-            this.pictureBoxZoom.Click += new System.EventHandler(this.pictureBoxZoom_Click);
-            // 
-            // txtdescripcion
-            // 
-            this.txtdescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtdescripcion.BorderColor = System.Drawing.Color.SeaGreen;
-            this.txtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdescripcion.Location = new System.Drawing.Point(5, 358);
-            this.txtdescripcion.Multiline = true;
-            this.txtdescripcion.Name = "txtdescripcion";
-            this.txtdescripcion.Size = new System.Drawing.Size(354, 43);
-            this.txtdescripcion.TabIndex = 3;
-            this.txtdescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.White;
@@ -188,7 +161,7 @@
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox17.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox17.Location = new System.Drawing.Point(5, 25);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(38, 35);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,17 +169,45 @@
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.PictureBox17_Click);
             // 
-            // pictureBox1
+            // btnAnterior
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Principal.Properties.Resources.descarga;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.btnAnterior.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAnterior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnterior.Image = ((System.Drawing.Image)(resources.GetObject("btnAnterior.Image")));
+            this.btnAnterior.Location = new System.Drawing.Point(123, 492);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(42, 30);
+            this.btnAnterior.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAnterior.TabIndex = 34;
+            this.btnAnterior.TabStop = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // pbzImagenZoom
+            // 
+            this.pbzImagenZoom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbzImagenZoom.BackColor = System.Drawing.Color.White;
+            this.pbzImagenZoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbzImagenZoom.Location = new System.Drawing.Point(2, 191);
+            this.pbzImagenZoom.Name = "pbzImagenZoom";
+            this.pbzImagenZoom.Size = new System.Drawing.Size(358, 291);
+            this.pbzImagenZoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbzImagenZoom.TabIndex = 0;
+            this.pbzImagenZoom.TabStop = false;
+            this.pbzImagenZoom.Click += new System.EventHandler(this.pictureBoxZoom_Click);
+            // 
+            // txtdescripcion
+            // 
+            this.txtdescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdescripcion.BorderColor = System.Drawing.Color.SeaGreen;
+            this.txtdescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtdescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdescripcion.Location = new System.Drawing.Point(5, 360);
+            this.txtdescripcion.Multiline = true;
+            this.txtdescripcion.Name = "txtdescripcion";
+            this.txtdescripcion.Size = new System.Drawing.Size(354, 43);
+            this.txtdescripcion.TabIndex = 3;
+            this.txtdescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox9
             // 
@@ -272,13 +273,14 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.transparentControl1.ResumeLayout(false);
             this.transparentControl3.ResumeLayout(false);
+            this.transparentControl3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxZoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbzImagenZoom)).EndInit();
             this.groupBox9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -294,7 +296,7 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox informacion;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBoxZoom;
+        private System.Windows.Forms.PictureBox pbzImagenZoom;
         private System.Windows.Forms.Label jlbnombre;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtdescripcion;
         private System.Windows.Forms.PictureBox pictureBox17;

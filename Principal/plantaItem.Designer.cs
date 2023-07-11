@@ -35,10 +35,9 @@
             // 
             // pctImagen
             // 
-            //this.pctImagen.Image = global::Principal.Properties.Resources.Anamu__3_;
-            this.pctImagen.Location = new System.Drawing.Point(1, 0);
+            this.pctImagen.Location = new System.Drawing.Point(1, 39);
             this.pctImagen.Name = "pctImagen";
-            this.pctImagen.Size = new System.Drawing.Size(170, 141);
+            this.pctImagen.Size = new System.Drawing.Size(166, 135);
             this.pctImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctImagen.TabIndex = 0;
             this.pctImagen.TabStop = false;
@@ -49,7 +48,7 @@
             this.txtnombre.BorderColor = System.Drawing.Color.SeaGreen;
             this.txtnombre.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.txtnombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtnombre.Location = new System.Drawing.Point(1, 147);
+            this.txtnombre.Location = new System.Drawing.Point(3, 4);
             this.txtnombre.Multiline = true;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.ReadOnly = true;

@@ -90,6 +90,7 @@ namespace Principal
                 {
                     LogicaPlanta.AgregarPlanta(Planta);
                     MessageBox.Show("Registro Exitoso");
+                    Limpiar();
                 }
                 catch (Exception ex)
                 {
