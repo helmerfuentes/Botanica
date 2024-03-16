@@ -396,7 +396,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackgroundImage = global::Principal.Properties.Resources.quien2;
+            this.panel4.BackgroundImage = global::Principal.Properties.Resources.quien;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Location = new System.Drawing.Point(0, 73);
             this.panel4.Name = "panel4";

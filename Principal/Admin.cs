@@ -12,9 +12,8 @@ namespace Principal
     {
         LogicaTipoPlantas LogicaTipoPlantas;
         LogicaPlanta LogicaPlanta;
-        Planta Planta;
+        PlantaModel Planta;
         IEnumerable<TipoPlanta> tiposPlantas;
-        string url;
 
         public FormAdmin()
         {
@@ -22,7 +21,7 @@ namespace Principal
 
             LogicaTipoPlantas = new LogicaTipoPlantas();
             LogicaPlanta = new LogicaPlanta();
-            Planta = new Planta();
+            Planta = new PlantaModel();
             CargarClasificacionPlantas();
         }
 

@@ -24,8 +24,6 @@ namespace Dato
                 Conectar();
                 cmd = new MySqlCommand(sql, connection);
 
-
-
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
@@ -124,11 +122,11 @@ namespace Dato
             }
         }
 
-        public Planta PlantaId(string sql)
+        public PlantaModel PlantaId(string sql)
         {
             try
             {
-                Planta p = new Planta();
+                PlantaModel p = new PlantaModel();
                 Conectar();
                 cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader myReader = cmd.ExecuteReader();
@@ -153,15 +151,17 @@ namespace Dato
             }
         }
 
-        public List<byte[]> ObtenerImagenId(string sql, int codigo)
+        public List<byte[]> ObtenerImagenId(int codigo, int limiteImagenes = int.MaxValue)
         {
             try
             {
                 Conectar();
                 List<byte[]> imagenes = new List<byte[]>();
                 //concatenar el codigo de la planta para el where de la consulta
-                sql += codigo;
+                var sql = "select ruta from imagen where plantaFk = @codigo LIMIT @limite";
                 cmd = new MySqlCommand(sql, connection);
+                cmd.Parameters.AddWithValue("codigo", codigo);
+                cmd.Parameters.AddWithValue("limite", limiteImagenes);
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
@@ -182,25 +182,26 @@ namespace Dato
             }
         }
 
-        public List<Planta> getAllPlantaTipo(string sql)
+        public List<PlantaModel> GetAllPlantaPorSQL(string sql)
         {
-            List<Planta> plantas = null;
-            Planta p;
+            List<PlantaModel> plantas = new List<PlantaModel>();
             try
             {
                 Conectar();
-                plantas = new List<Planta>();
-
                 cmd = new MySqlCommand(sql, connection);
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 while (myReader.Read())
                 {
-                    p = new Planta();
-                    p.Codigo = int.Parse(myReader["plantaId"].ToString());
-                    p.Nombre = myReader["nombre"].ToString();
-                    p.Descripcion = myReader["descripcion"].ToString();
-                    p.TipoPlanta.Add(new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString()));
-                    plantas.Add(p);
+                    var tipoPlanta = new TipoPlanta(int.Parse(myReader["idTipo"].ToString()), myReader["descripcionTipo"].ToString(), myReader["tipo"].ToString());
+                    PlantaModel planta = new PlantaModel
+                    {
+                        Codigo = int.Parse(myReader["plantaId"].ToString()),
+                        Nombre = myReader["nombre"].ToString(),
+                        Descripcion = myReader["descripcion"].ToString(),
+                        TipoPlanta = new List<TipoPlanta> { tipoPlanta }
+
+                    };
+                    plantas.Add(planta);
                 }
 
                 return plantas;
@@ -216,7 +217,7 @@ namespace Dato
             }
         }
 
-        public Planta AgregarPlanta(Planta planta)
+        public PlantaModel AgregarPlanta(PlantaModel planta)
         {
             var sql = "INSERT INTO PLANTA(nombre,descripcion) VALUES (@nombre,@descripcion);SELECT LAST_INSERT_ID();";
             try

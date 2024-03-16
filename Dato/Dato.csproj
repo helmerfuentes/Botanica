@@ -92,6 +92,7 @@
     <Compile Include="DatosPlantas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DatosTipoPlanta.cs" />
+    <Compile Include="PuntajeDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidades\Entidades.csproj">

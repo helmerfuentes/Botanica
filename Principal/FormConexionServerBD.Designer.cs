@@ -148,7 +148,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.White;
             this.txtPassword.HintForeColor = System.Drawing.Color.Empty;
             this.txtPassword.HintText = "Contraseña";
-            this.txtPassword.isPassword = false;
+            this.txtPassword.isPassword = true;
             this.txtPassword.LineFocusedColor = System.Drawing.Color.LightSeaGreen;
             this.txtPassword.LineIdleColor = System.Drawing.Color.Gray;
             this.txtPassword.LineMouseHoverColor = System.Drawing.Color.LightSeaGreen;
@@ -159,6 +159,7 @@
             this.txtPassword.Size = new System.Drawing.Size(271, 33);
             this.txtPassword.TabIndex = 110;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.OnValueChanged += new System.EventHandler(this.txtPassword_OnValueChanged);
             // 
             // btnValidar
             // 

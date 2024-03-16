@@ -121,6 +121,12 @@
     <Compile Include="FormularioJuego\MenuJuegos.Designer.cs">
       <DependentUpon>MenuJuegos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioJuego\PuntajeDeJuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\PuntajeDeJuegos.Designer.cs">
+      <DependentUpon>PuntajeDeJuegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioJuego\QuiwnBotanico\Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioJuego\MenuJuegos.resx">
       <DependentUpon>MenuJuegos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\PuntajeDeJuegos.resx">
+      <DependentUpon>PuntajeDeJuegos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioJuego\QuiwnBotanico\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -286,6 +295,8 @@
   <ItemGroup>
     <Content Include="ArchivosDll\Bunifu_UI_v1.5.3.dll" />
     <Content Include="ArchivosDll\TransControl_src.dll" />
+    <Content Include="Resources\winnerBotanico.png" />
+    <None Include="Resources\winnerBotanico1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

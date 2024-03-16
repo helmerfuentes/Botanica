@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace logica
 {
@@ -18,7 +19,7 @@ namespace logica
             DatosTipoPlanta = new DatosTipoPlanta();
         }
 
-        public bool AgregarPlanta(Planta planta)
+        public bool AgregarPlanta(PlantaModel planta)
         {
             var rutasImagenes = datosPlantas.SubirImagenesServidor(planta.Imagenes);
             var plantaResponse = datosPlantas.AgregarPlanta(planta);
@@ -36,11 +37,25 @@ namespace logica
 
         }
 
-        public List<Planta> ObtenerPlantasTipo(string idTipoPlanta)
+        public IEnumerable<PlantaModel> GetPlantasParaJuego1Vs1()
+        {
+            var plantas = ObtenerTodasPlantas()
+                .Take(16);
+
+            foreach (var planta in plantas)
+            {
+                planta.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(planta.Codigo, limiteImagenes: 1);
+            }
+
+            return plantas;
+        }
+
+
+        public List<PlantaModel> ObtenerPlantasTipo(string idTipoPlanta)
         {
             try
             {
-                List<Planta> plantas;
+                List<PlantaModel> plantas;
 
                 sql = "select idTipo, tp.tipo,tp.descripcion as descripcionTipo, pl.id as plantaId,pl.nombre, pl.descripcion from tipo tp " +
                         "inner join planta_tipo pt " +
@@ -49,15 +64,14 @@ namespace logica
                         "on pt.plantaFk = pl.id " +
                         "where idTipo = " + idTipoPlanta;
 
-                plantas = datosPlantas.getAllPlantaTipo(sql);
+                plantas = datosPlantas.GetAllPlantaPorSQL(sql);
 
                 if (plantas != null)
                 {
-                    sql = "select ruta from imagen where plantaFk=";
-                    foreach (Planta item in plantas)
+                    foreach (PlantaModel item in plantas)
                     {
 
-                        item.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(sql, item.Codigo);
+                        item.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(item.Codigo);
 
                     }
                 }
@@ -70,18 +84,17 @@ namespace logica
             }
         }
 
-        public Planta getPlantaId(string idPlanta)
+        public PlantaModel getPlantaId(string idPlanta)
         {
             try
             {
-                Planta miPlanta;
+                PlantaModel miPlanta;
                 sql = "select * from planta where id=" + idPlanta;
 
                 miPlanta = datosPlantas.PlantaId(sql);
                 if (miPlanta != null)
                 {
-                    sql = "select imagen from imagen where plantaFk=";
-                    //miPlanta.Imagenes = datosPlantas.obtenerImageneId(sql, miPlanta.Codigo);
+                    miPlanta.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(miPlanta.Codigo);
 
                     sql = "select tp.idTipo,tp.tipo,tp.descripcion from planta pl " +
                         "inner join planta_tipo pt " +
@@ -90,24 +103,27 @@ namespace logica
                         "on pt.tipoFK = tp.idTipo " +
                         "where pl.id =" + miPlanta.Codigo;
                     miPlanta.TipoPlanta = DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
-                    return miPlanta;
                 }
-                return null;
+                //sql = "select ruta from imagen where plantaFk=";
+                //miPlanta.ImagenesConvertidas1 = datosPlantas.ObtenerImagenId(sql, miPlanta.Codigo);
+                return miPlanta;
             }
             catch (Exception)
             {
 
                 return null;
             }
-
-
-
-
         }
 
-
-
-
-
+        private List<PlantaModel> ObtenerTodasPlantas()
+        {
+            sql = "select idTipo, tp.tipo,tp.descripcion as descripcionTipo, pl.id as plantaId,pl.nombre, pl.descripcion from tipo tp " +
+                         "inner join planta_tipo pt " +
+                         "on tp.idTipo = pt.tipoFk " +
+                         "inner join planta pl " +
+                         "on pt.plantaFk = pl.id ";
+            var plantas = datosPlantas.GetAllPlantaPorSQL(sql);
+            return plantas;
+        }
     }
 }

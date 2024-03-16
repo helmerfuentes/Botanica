@@ -1,4 +1,5 @@
 ﻿using Interfaces;
+using Principal.FormularioJuego;
 using System;
 using System.Windows.Forms;
 
@@ -17,9 +18,12 @@ namespace Principal
             LogicaConexion logicaConexion = new LogicaConexion();
             try
             {
-                logicaConexion.ConexionDisponible();
-                FormPrincipal main = new FormPrincipal();
-                main.Show();
+                JuegoPareja juegoPareja = new JuegoPareja();
+                juegoPareja.Show();
+
+                //logicaConexion.ConexionDisponible();
+                //FormPrincipal main = new FormPrincipal();
+                //main.Show();
             }
             catch (Exception ex)
             {

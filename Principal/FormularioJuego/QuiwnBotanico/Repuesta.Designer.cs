@@ -163,6 +163,7 @@
             this.label1.TabIndex = 5;
             this.label1.Tag = "a";
             this.label1.Text = "¿ A que clasificacion pertenece la Planta?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label2
             // 
@@ -175,6 +176,7 @@
             this.label2.TabIndex = 6;
             this.label2.Tag = "a";
             this.label2.Text = "¿ A que clasificacion pertenece la Planta?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Repuesta
             // 

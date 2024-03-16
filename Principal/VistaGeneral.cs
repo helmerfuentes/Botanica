@@ -11,7 +11,7 @@ namespace Principal
 {
     public partial class VistaGeneral : Form
     {
-        List<Planta> plantas;
+        List<PlantaModel> plantas;
         LogicaPlanta LogicaPlanta;
         List<Image> ListaImagenesPlanta;
         int indiceImagenListaPlanta = 0;
@@ -32,7 +32,7 @@ namespace Principal
                 plantaItem[] plantaItems = new plantaItem[plantas.Count];
 
                 int i = 0;
-                foreach (Planta item in plantas)
+                foreach (PlantaModel item in plantas)
                 {
                     plantaItems[i] = new plantaItem();
                     plantaItems[i].indiceLista = i;

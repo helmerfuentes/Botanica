@@ -2,7 +2,7 @@
 
 namespace Entidades
 {
-    public class Planta
+    public class PlantaModel
     {
         private int codigo;
         private string nombre;
@@ -11,14 +11,14 @@ namespace Entidades
         private List<string> imagenes;
         private List<byte[]> ImagenesConvertidas;
 
-        public Planta()
+        public PlantaModel()
         {
             tipoPlanta = new List<TipoPlanta>();
             imagenes = new List<string>();
 
         }
 
-        public Planta(int codigo, string nombre, string descripcion)
+        public PlantaModel(int codigo, string nombre, string descripcion)
         {
             this.Codigo = codigo;
             this.Nombre = nombre;
@@ -26,7 +26,7 @@ namespace Entidades
 
         }
 
-        public Planta(int codigo, string nombre, string descripcion, List<TipoPlanta> tipoPlanta, List<string> imagenes)
+        public PlantaModel(int codigo, string nombre, string descripcion, List<TipoPlanta> tipoPlanta, List<string> imagenes)
         {
             this.codigo = codigo;
             this.nombre = nombre;

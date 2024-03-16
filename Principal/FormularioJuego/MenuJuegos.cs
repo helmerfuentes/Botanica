@@ -33,9 +33,9 @@ namespace Principal.FormularioJuego
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            FormularioJuego.JuegoPareja juegoPareja = new JuegoPareja();
-            juegoPareja.Show();
-            this.Close();
+            //FormularioJuego.JuegoPareja juegoPareja = new JuegoPareja();
+            //juegoPareja.Show();
+            //this.Close();
         }
     }
 }

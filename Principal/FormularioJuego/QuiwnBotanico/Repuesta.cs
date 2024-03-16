@@ -1,13 +1,10 @@
-﻿using Entidades;
+﻿using Dato;
+using Entidades;
+using Entidades.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Principal.FormularioJuego.QuiwnBotanico
@@ -16,32 +13,36 @@ namespace Principal.FormularioJuego.QuiwnBotanico
     {
         logica.LogicaPlanta LogicaPlanta;
         logica.LogicaTipoPlantas logicaTipoPlantas;
+        PuntajeDatos PuntajeDatos;
         private int respuesta = -1;
         private int preguntaNumero = -1;
-        private string nombre = "",sRespuesta;
+        private string nombre = "", sRespuesta, puntaje;
 
-        public Repuesta(string nombre, int cual)
+        public Repuesta(string nombre, int cual, string puntaje)
         {
             InitializeComponent();
             this.Visible = true;
             this.nombre = nombre;
             preguntaNumero = cual;
-            cargarPregunta();
+            this.puntaje = puntaje;
+            CargarPregunta();
         }
 
         private void Repuesta_Load(object sender, EventArgs e)
         {
 
         }
-        private void cargarPregunta()
+        private void CargarPregunta()
         {
             LogicaPlanta = new logica.LogicaPlanta();
             logicaTipoPlantas = new logica.LogicaTipoPlantas();
             Random rando = new Random();
-            int idPlanta = rando.Next(1, LogicaPlanta.NumeroPlantas());
-          Planta planta=  LogicaPlanta.getPlantaId(idPlanta.ToString());
+            int numeroDePlantas = LogicaPlanta.NumeroPlantas();
+            int idPlanta = rando.Next(1, numeroDePlantas + 1);
+
+            PlantaModel planta = LogicaPlanta.getPlantaId(idPlanta.ToString());
             label2.Text = planta.Nombre + ".";
-            //picImagen.Image = byteArrayToImage(planta.Imagenes[rando.Next(0, planta.Imagenes.Count-1)]);
+            picImagen.Image = byteArrayToImage(planta.ImagenesConvertidas1[rando.Next(0, planta.ImagenesConvertidas1.Count - 1)]);
             List<TipoPlanta> noLista = logicaTipoPlantas.getNoTipo(idPlanta);
             //$$$$PREGUNTA ERRONEAS
             this.respuesta = rando.Next(4);
@@ -65,7 +66,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
                         break;
                 }
             }
-            
+
             switch (respuesta)
             {
                 case 0:
@@ -105,6 +106,8 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             }
             else
             {
+                PuntajeDatos = new PuntajeDatos();
+                PuntajeDatos.GuardarPuntaje(this.nombre, this.puntaje, TiposDeJuegoEnum.Botanico);
                 MessageBox.Show("perdio, La respuesta es=>\n\t" + sRespuesta, label2.Text);
                 this.Close();
                 Inicio inicio = new Inicio();

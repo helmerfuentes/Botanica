@@ -54,5 +54,10 @@ namespace Principal
         {
             Application.Exit();
         }
+
+        private void txtPassword_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

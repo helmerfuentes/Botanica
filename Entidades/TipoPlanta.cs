@@ -10,7 +10,7 @@ namespace Entidades
     {
         private int codigo;
         private  string descripcion,nombre;
-        private List<Planta> plantas;
+        private List<PlantaModel> plantas;
             
 
 
@@ -24,6 +24,6 @@ namespace Entidades
         public int Codigo { get => codigo; set => codigo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public List<Planta> Plantas { get => plantas; set => plantas = value; }
+        public List<PlantaModel> Plantas { get => plantas; set => plantas = value; }
     }
 }
