@@ -109,10 +109,16 @@
     <Compile Include="FormularioJuego\1Vs1.Designer.cs">
       <DependentUpon>1Vs1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioJuego\JuegoPareja.cs">
+    <Compile Include="FormularioJuego\ParejaCartas\ControlCarta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormularioJuego\ParejaCartas\ControlCarta.Designer.cs">
+      <DependentUpon>ControlCarta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioJuego\ParejaCartas\JuegoPareja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormularioJuego\JuegoPareja.Designer.cs">
+    <Compile Include="FormularioJuego\ParejaCartas\JuegoPareja.Designer.cs">
       <DependentUpon>JuegoPareja.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioJuego\MenuJuegos.cs">
@@ -186,7 +192,10 @@
     <EmbeddedResource Include="FormularioJuego\1Vs1.resx">
       <DependentUpon>1Vs1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormularioJuego\JuegoPareja.resx">
+    <EmbeddedResource Include="FormularioJuego\ParejaCartas\ControlCarta.resx">
+      <DependentUpon>ControlCarta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioJuego\ParejaCartas\JuegoPareja.resx">
       <DependentUpon>JuegoPareja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioJuego\MenuJuegos.resx">

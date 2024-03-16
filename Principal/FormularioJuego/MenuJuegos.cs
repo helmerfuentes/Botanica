@@ -1,4 +1,5 @@
-﻿using Principal.FormularioJuego.QuiwnBotanico;
+﻿using Principal.FormularioJuego.ParejaCartas;
+using Principal.FormularioJuego.QuiwnBotanico;
 using System;
 using System.Windows.Forms;
 
@@ -33,9 +34,9 @@ namespace Principal.FormularioJuego
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //FormularioJuego.JuegoPareja juegoPareja = new JuegoPareja();
-            //juegoPareja.Show();
-            //this.Close();
+            JuegoPareja juegoPareja = new JuegoPareja();
+            juegoPareja.Show();
+            this.Close();
         }
     }
 }

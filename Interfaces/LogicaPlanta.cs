@@ -40,7 +40,7 @@ namespace logica
         public IEnumerable<PlantaModel> GetPlantasParaJuego1Vs1()
         {
             var plantas = ObtenerTodasPlantas()
-                .Take(16);
+                .Take(8);
 
             foreach (var planta in plantas)
             {
