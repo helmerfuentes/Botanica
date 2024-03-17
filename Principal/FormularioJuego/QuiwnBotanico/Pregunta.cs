@@ -76,7 +76,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
                     break;
                 default:
                     var puntajeDatos = new PuntajeDatos();
-                    puntajeDatos.GuardarPuntaje(jlbNombre.Text, this.puntaje, TiposDeJuegoEnum.Botanico);
+                    puntajeDatos.GuardarPuntaje(jlbNombre.Text, this.puntaje, TiposDeJuegoEnum.Botanico, "");
                     panel4.BackgroundImage = Properties.Resources.winnerBotanico;
                     MessageBox.Show("Ganastes, eres un botanico");
                     break;

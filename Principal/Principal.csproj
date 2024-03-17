@@ -12,7 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>G:\Escritorio\Biblioteca Virtual\Instalador\</PublishUrl>
+    <PublishUrl>C:\Users\elmer\OneDrive\Public\Escritorio\CONDONACION ICETEX\Programa\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,7 +22,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,10 +62,14 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <StartupObject />
+    <StartupObject>Principal.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>plant_nature_leaves_leaf_dirt_earth_icon_141982.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -304,6 +308,7 @@
   <ItemGroup>
     <Content Include="ArchivosDll\Bunifu_UI_v1.5.3.dll" />
     <Content Include="ArchivosDll\TransControl_src.dll" />
+    <Content Include="plant_nature_leaves_leaf_dirt_earth_icon_141982.ico" />
     <Content Include="Resources\winnerBotanico.png" />
     <None Include="Resources\winnerBotanico1.png" />
   </ItemGroup>

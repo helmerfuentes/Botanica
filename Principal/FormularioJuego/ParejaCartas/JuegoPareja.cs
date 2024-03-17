@@ -1,4 +1,6 @@
-﻿using Entidades;
+﻿using Dato;
+using Entidades;
+using Entidades.Enums;
 using logica;
 using Principal.Properties;
 using System;
@@ -95,10 +97,15 @@ namespace Principal.FormularioJuego.ParejaCartas
 
                         if (puntajes == PUNTAJE_MAXIMO)
                         {
-                            timer.Stop();
+							var puntajeDatos = new PuntajeDatos();
+
+                            var timer = this.timer;
+                            var a = jllTiempo.Text;
+
+							puntajeDatos.GuardarPuntaje(txtNombre.Text, "0", TiposDeJuegoEnum.Memoria, jllTiempo.Text);
+							timer.Stop();
                             btnReiniciar.Text = "Volver a Jugar";
                             MessageBox.Show("Felicidades has ganado");
-
                         }
                     }
                     else
@@ -189,7 +196,20 @@ namespace Principal.FormularioJuego.ParejaCartas
             TimeSpan tiempoTranscurrido = DateTime.Now - inicioJuegoDate;
 
             // Actualizar el texto del Label con el tiempo transcurrido
-            jllTiempo.Text = "Tiempo: " + tiempoTranscurrido.ToString(@"hh\:mm\:ss");
+            jllTiempo.Text = tiempoTranscurrido.ToString(@"hh\:mm\:ss");
         }
-    }
+
+		private void btnPuntaje_Click(object sender, EventArgs e)
+		{
+			PuntajeDeJuegos puntaje = new PuntajeDeJuegos(Entidades.Enums.TiposDeJuegoEnum.Memoria);
+			puntaje.ShowDialog();
+		}
+
+		private void btnVolver_Click(object sender, EventArgs e)
+		{
+			MenuJuegos mj = new MenuJuegos();
+			mj.Show();
+			this.Hide();
+		}
+	}
 }

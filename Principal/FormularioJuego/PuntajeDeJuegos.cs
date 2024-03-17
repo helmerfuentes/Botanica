@@ -26,15 +26,14 @@ namespace Principal.FormularioJuego
                 case TiposDeJuegoEnum.Botanico:
                     tablaPuntaje.DataSource = puntajeDatos.ObtenerPuntajeByTipoJuego(tiposDeJuego);
                     break;
-                case TiposDeJuegoEnum.Quemado:
-                    tablaPuntaje.DataSource = puntajeDatos.ObtenerPuntajeByTipoJuego(tiposDeJuego);
+                case TiposDeJuegoEnum.Memoria:
+                    tablaPuntaje.DataSource = puntajeDatos.ObtenerPuntajeByTipoJuego(tiposDeJuego, "tiempo");
                     break;
             }
             foreach (DataGridViewColumn column in tablaPuntaje.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
-
         }
 
         private void tablaPuntaje_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)

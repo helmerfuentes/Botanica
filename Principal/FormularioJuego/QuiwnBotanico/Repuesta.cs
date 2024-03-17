@@ -107,7 +107,7 @@ namespace Principal.FormularioJuego.QuiwnBotanico
             else
             {
                 PuntajeDatos = new PuntajeDatos();
-                PuntajeDatos.GuardarPuntaje(this.nombre, this.puntaje, TiposDeJuegoEnum.Botanico);
+                PuntajeDatos.GuardarPuntaje(this.nombre, this.puntaje, TiposDeJuegoEnum.Botanico, "");
                 MessageBox.Show("perdio, La respuesta es=>\n\t" + sRespuesta, label2.Text);
                 this.Close();
                 Inicio inicio = new Inicio();

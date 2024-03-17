@@ -14,12 +14,11 @@ namespace logica
             DatosTipoPlanta = new DatosTipoPlanta();
             TipoPlantas = new List<TipoPlanta>();
         }
+
         public List<TipoPlanta> getAll()
         {
             string sql = "select *from tipo";
             return TipoPlantas = DatosTipoPlanta.ObtenerListadoTipoPlanta(sql);
-
-
         }
 
         public List<TipoPlanta> getNoTipo(int codigoPlanta)

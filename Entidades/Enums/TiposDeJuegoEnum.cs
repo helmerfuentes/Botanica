@@ -3,6 +3,6 @@
     public enum TiposDeJuegoEnum
     {
         Botanico = 1,
-        Quemado = 2,
+        Memoria = 2,
     }
 }
